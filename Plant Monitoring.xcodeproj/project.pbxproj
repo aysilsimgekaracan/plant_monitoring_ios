@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */; };
+		0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */; };
 		3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */; };
 		3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFD2B668CBC00946FF9 /* SceneDelegate.swift */; };
 		3F7EDD002B668CBC00946FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFF2B668CBC00946FF9 /* ViewController.swift */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoader.swift; sourceTree = "<group>"; };
+		0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Additions.swift"; sourceTree = "<group>"; };
+		0F07FBCE2B84C40300E2ED20 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		3F7EDCF82B668CBC00946FF9 /* Plant Monitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Monitoring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7EDCFD2B668CBC00946FF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +67,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F07FBC72B84BEB300E2ED20 /* ConfigLoader */ = {
+			isa = PBXGroup;
+			children = (
+				0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */,
+			);
+			path = ConfigLoader;
+			sourceTree = "<group>";
+		};
+		0F07FBCA2B84BF6900E2ED20 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
+		0F07FBCD2B84C3DF00E2ED20 /* SecureSecrets */ = {
+			isa = PBXGroup;
+			children = (
+				0F07FBCE2B84C40300E2ED20 /* Secrets.xcconfig */,
+			);
+			path = SecureSecrets;
+			sourceTree = "<group>";
+		};
+		0F07FBCF2B84D22B00E2ED20 /* TokenService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TokenService;
+			sourceTree = "<group>";
+		};
 		3F7EDCEF2B668CBC00946FF9 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +150,7 @@
 		3F7EDD112B668F2A00946FF9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0F07FBCD2B84C3DF00E2ED20 /* SecureSecrets */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -142,6 +179,8 @@
 		3F7EDD142B668F4200946FF9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0F07FBCF2B84D22B00E2ED20 /* TokenService */,
+				0F07FBC72B84BEB300E2ED20 /* ConfigLoader */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -168,6 +207,7 @@
 		3F7EDD2E2B66926300946FF9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				0F07FBCA2B84BF6900E2ED20 /* Bundle */,
 				3F7EDD2F2B66926A00946FF9 /* String */,
 			);
 			path = Foundation;
@@ -272,12 +312,14 @@
 				3F7EDD222B66904900946FF9 /* HomeCoordinator.swift in Sources */,
 				3F7EDD392B6694BA00946FF9 /* SplashViewModel.swift in Sources */,
 				3F7EDD1A2B66901400946FF9 /* TabBarCoordinator.swift in Sources */,
+				0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */,
 				3F7EDD202B66903F00946FF9 /* HomeViewModel.swift in Sources */,
 				3F7EDD182B668FAD00946FF9 /* Coordinator.swift in Sources */,
 				3F7EDD312B66927B00946FF9 /* String+Additions.swift in Sources */,
 				3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */,
 				3F7EDD1E2B66903300946FF9 /* HomeViewController.swift in Sources */,
 				3F7EDD162B668FA400946FF9 /* ApplicationCoordinator.swift in Sources */,
+				0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */,
 				3F7EDD372B6694B000946FF9 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +457,7 @@
 		};
 		3F7EDD0D2B668CBF00946FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F07FBCE2B84C40300E2ED20 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -443,6 +486,7 @@
 		};
 		3F7EDD0E2B668CBF00946FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F07FBCE2B84C40300E2ED20 /* Secrets.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
