@@ -7,10 +7,19 @@
 
 import UIKit
 
-class SplashViewController: UIViewController {
-    // MARK: - Variables
+public final class SplashViewController: UIViewController {
+ 
+  // MARK: - IBOutlets
+
+  @IBOutlet weak var animationView: UIView!
+
+  // MARK: - Properties
+
   var viewModel: SplashViewModel!
-  
+  let animationDuration = 1.0
+
+  // MARK: - View Lifecylce
+
   init(viewModel: SplashViewModel) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
@@ -20,7 +29,26 @@ class SplashViewController: UIViewController {
     super.init(coder: coder)
   }
   
-  override func viewDidLoad() {
-    viewModel.proceed()
+  public override func viewDidLoad() {
+    animateBackgroundAndProceed()
   }
+  
+  // MARK: - Private Helpers
+  
+  private func animateBackgroundAndProceed() {
+    UIView.animate(withDuration: animationDuration) {
+      self.animationView.layer.cornerRadius = 120
+      self.animationView.backgroundColor = .green
+      self.animationView.layer.opacity = 0.4
+      self.animationView.layer.masksToBounds = true
+
+      self.animationView.layoutIfNeeded()
+    }
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
+      self.viewModel.proceed()
+    }
+  }
+  
+  
 }
