@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */; };
 		0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */; };
+		0F4A86112B92017F00EC6BD9 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4A86102B92017F00EC6BD9 /* PromiseKit */; };
 		3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */; };
 		3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFD2B668CBC00946FF9 /* SceneDelegate.swift */; };
 		3F7EDD002B668CBC00946FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFF2B668CBC00946FF9 /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4A86112B92017F00EC6BD9 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +250,9 @@
 			dependencies = (
 			);
 			name = "Plant Monitoring";
+			packageProductDependencies = (
+				0F4A86102B92017F00EC6BD9 /* PromiseKit */,
+			);
 			productName = "Plant Monitoring";
 			productReference = 3F7EDCF82B668CBC00946FF9 /* Plant Monitoring.app */;
 			productType = "com.apple.product-type.application";
@@ -277,6 +282,9 @@
 				tr,
 			);
 			mainGroup = 3F7EDCEF2B668CBC00946FF9;
+			packageReferences = (
+				0F4A860F2B92017E00EC6BD9 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+			);
 			productRefGroup = 3F7EDCF92B668CBC00946FF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -535,6 +543,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F4A860F2B92017E00EC6BD9 /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F4A86102B92017F00EC6BD9 /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F4A860F2B92017E00EC6BD9 /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F7EDCF02B668CBC00946FF9 /* Project object */;
 }
