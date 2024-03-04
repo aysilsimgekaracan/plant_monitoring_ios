@@ -9,7 +9,13 @@
 /* Begin PBXBuildFile section */
 		0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */; };
 		0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */; };
+		0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBDB2B90B26000E2ED20 /* HTTPTask.swift */; };
+		0F07FBDE2B90B48000E2ED20 /* TokenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBDD2B90B48000E2ED20 /* TokenItem.swift */; };
+		0F4A860E2B91FC1D00EC6BD9 /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A860D2B91FC1D00EC6BD9 /* TokenService.swift */; };
 		0F4A86112B92017F00EC6BD9 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0F4A86102B92017F00EC6BD9 /* PromiseKit */; };
+		0F4A86172B92083500EC6BD9 /* UserDefaults+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A86162B92083500EC6BD9 /* UserDefaults+Additions.swift */; };
+		0F4A861A2B92087100EC6BD9 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A86192B92087100EC6BD9 /* UserDefaultsKeys.swift */; };
+		0F4A861D2B95E3AA00EC6BD9 /* SplashDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */; };
 		3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */; };
 		3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFD2B668CBC00946FF9 /* SceneDelegate.swift */; };
 		3F7EDD002B668CBC00946FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFF2B668CBC00946FF9 /* ViewController.swift */; };
@@ -34,6 +40,12 @@
 		0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoader.swift; sourceTree = "<group>"; };
 		0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Additions.swift"; sourceTree = "<group>"; };
 		0F07FBCE2B84C40300E2ED20 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		0F07FBDB2B90B26000E2ED20 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		0F07FBDD2B90B48000E2ED20 /* TokenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenItem.swift; sourceTree = "<group>"; };
+		0F4A860D2B91FC1D00EC6BD9 /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
+		0F4A86162B92083500EC6BD9 /* UserDefaults+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Additions.swift"; sourceTree = "<group>"; };
+		0F4A86192B92087100EC6BD9 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
+		0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDisplay.swift; sourceTree = "<group>"; };
 		3F7EDCF82B668CBC00946FF9 /* Plant Monitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Monitoring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7EDCFD2B668CBC00946FF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +112,63 @@
 			path = TokenService;
 			sourceTree = "<group>";
 		};
+		0F07FBD62B90B1B200E2ED20 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0F07FBD72B90B1BB00E2ED20 /* Model */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0F07FBD72B90B1BB00E2ED20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F07FBDD2B90B48000E2ED20 /* TokenItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F07FBDA2B90B22C00E2ED20 /* HTTPTask */ = {
+			isa = PBXGroup;
+			children = (
+				0F07FBDB2B90B26000E2ED20 /* HTTPTask.swift */,
+			);
+			path = HTTPTask;
+			sourceTree = "<group>";
+		};
+		};
+		0F4A860C2B91FC0C00EC6BD9 /* TokenService */ = {
+			isa = PBXGroup;
+			children = (
+				0F4A860D2B91FC1D00EC6BD9 /* TokenService.swift */,
+			);
+			path = TokenService;
+			sourceTree = "<group>";
+		};
+		0F4A86152B92081900EC6BD9 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				0F4A86162B92083500EC6BD9 /* UserDefaults+Additions.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		0F4A86182B92085E00EC6BD9 /* UserDefaultsKeys */ = {
+			isa = PBXGroup;
+			children = (
+				0F4A86192B92087100EC6BD9 /* UserDefaultsKeys.swift */,
+			);
+			path = UserDefaultsKeys;
+			sourceTree = "<group>";
+		};
+		0F4A861B2B95E38E00EC6BD9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		3F7EDCEF2B668CBC00946FF9 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +205,7 @@
 		3F7EDD0F2B668F1900946FF9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0F4A86182B92085E00EC6BD9 /* UserDefaultsKeys */,
 				3F7EDD272B66920500946FF9 /* Localization */,
 			);
 			path = Common;
@@ -152,6 +222,8 @@
 		3F7EDD112B668F2A00946FF9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0F4A860C2B91FC0C00EC6BD9 /* TokenService */,
+				0F07FBDA2B90B22C00E2ED20 /* HTTPTask */,
 				0F07FBCD2B84C3DF00E2ED20 /* SecureSecrets */,
 			);
 			path = Networking;
@@ -209,6 +281,7 @@
 		3F7EDD2E2B66926300946FF9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				0F4A86152B92081900EC6BD9 /* UserDefaults */,
 				0F07FBCA2B84BF6900E2ED20 /* Bundle */,
 				3F7EDD2F2B66926A00946FF9 /* String */,
 			);
@@ -226,6 +299,8 @@
 		3F7EDD352B66949B00946FF9 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				0F4A861B2B95E38E00EC6BD9 /* UI */,
+				0F07FBD62B90B1B200E2ED20 /* API */,
 				3F7EDD362B6694B000946FF9 /* SplashViewController.swift */,
 				3F7EDD382B6694BA00946FF9 /* SplashViewModel.swift */,
 				3F7EDD3A2B6694C400946FF9 /* SplashCoordinator.swift */,
@@ -314,8 +389,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */,
 				3F7EDD002B668CBC00946FF9 /* ViewController.swift in Sources */,
 				3F7EDD3B2B6694C400946FF9 /* SplashCoordinator.swift in Sources */,
+				0F07FBDE2B90B48000E2ED20 /* TokenItem.swift in Sources */,
 				3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */,
 				3F7EDD222B66904900946FF9 /* HomeCoordinator.swift in Sources */,
 				3F7EDD392B6694BA00946FF9 /* SplashViewModel.swift in Sources */,
@@ -323,12 +400,16 @@
 				0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */,
 				3F7EDD202B66903F00946FF9 /* HomeViewModel.swift in Sources */,
 				3F7EDD182B668FAD00946FF9 /* Coordinator.swift in Sources */,
+				0F4A861A2B92087100EC6BD9 /* UserDefaultsKeys.swift in Sources */,
 				3F7EDD312B66927B00946FF9 /* String+Additions.swift in Sources */,
 				3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */,
 				3F7EDD1E2B66903300946FF9 /* HomeViewController.swift in Sources */,
 				3F7EDD162B668FA400946FF9 /* ApplicationCoordinator.swift in Sources */,
+				0F4A86172B92083500EC6BD9 /* UserDefaults+Additions.swift in Sources */,
 				0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */,
 				3F7EDD372B6694B000946FF9 /* SplashViewController.swift in Sources */,
+				0F4A860E2B91FC1D00EC6BD9 /* TokenService.swift in Sources */,
+				0F4A861D2B95E3AA00EC6BD9 /* SplashDisplay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

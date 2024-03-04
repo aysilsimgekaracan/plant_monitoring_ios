@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PromiseKit
 
 class SplashViewModel {
   var coordinator: SplashCoordinator!
@@ -13,6 +14,18 @@ class SplashViewModel {
   init(coordinator: SplashCoordinator!) {
     self.coordinator = coordinator
   }
+  
+  func start() -> Promise<SplashDisplay> {
+    return Promise { seal in
+      TokenService.shared.start().done { token in
+        seal.fulfill(SplashDisplay(isAuthSuccess: true))
+      }.catch { error in
+        seal.fulfill(SplashDisplay(isAuthSuccess: false))
+      }
+    }
+  }
+  
+  // MARK: - Navigation
   
   func proceed() {
     coordinator.startTabBar()
