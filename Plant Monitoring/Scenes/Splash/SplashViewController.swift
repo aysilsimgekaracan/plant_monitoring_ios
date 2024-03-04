@@ -17,6 +17,11 @@ public final class SplashViewController: UIViewController {
 
   var viewModel: SplashViewModel!
   let animationDuration = 1.0
+  private var display: SplashDisplay! {
+    didSet {
+      proceed()
+    }
+  }
 
   // MARK: - View Lifecylce
 
@@ -31,9 +36,16 @@ public final class SplashViewController: UIViewController {
   
   public override func viewDidLoad() {
     animateBackgroundAndProceed()
+    getDisplay()
   }
   
   // MARK: - Private Helpers
+  
+  private func getDisplay() {
+    viewModel.start().done { display in
+      self.display = display
+    }.cauterize()
+  }
   
   private func animateBackgroundAndProceed() {
     UIView.animate(withDuration: animationDuration) {
@@ -44,9 +56,22 @@ public final class SplashViewController: UIViewController {
 
       self.animationView.layoutIfNeeded()
     }
-    
+  }
+  
+  private func proceed() {
     DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
-      self.viewModel.proceed()
+      if self.display.isAuthSuccess {
+        self.viewModel.proceed()
+      } else {
+        // Give alert to user if request is not successfull, and try requesting again
+        let alert = UIAlertController(title: "Error", message: "Check your network", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .cancel) { _ in
+          self.getDisplay()
+        }
+        
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+      }
     }
   }
   
