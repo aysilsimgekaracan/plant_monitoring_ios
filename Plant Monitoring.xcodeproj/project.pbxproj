@@ -136,7 +136,6 @@
 			path = HTTPTask;
 			sourceTree = "<group>";
 		};
-		};
 		0F4A860C2B91FC0C00EC6BD9 /* TokenService */ = {
 			isa = PBXGroup;
 			children = (
