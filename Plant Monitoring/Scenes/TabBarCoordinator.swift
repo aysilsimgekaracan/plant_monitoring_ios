@@ -9,12 +9,11 @@ import UIKit
 
 class TabBarCoordinator: Coordinator {
   let tabBarController: UITabBarController = UITabBarController()
-  
+
   func start() {
     let homeCoordinator = HomeCoordinator()
-    
     homeCoordinator.start()
-    
+
     tabBarController.viewControllers = [homeCoordinator.navigationController]
   }
 }
