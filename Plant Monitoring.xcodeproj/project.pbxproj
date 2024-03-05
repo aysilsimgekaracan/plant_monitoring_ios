@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F028BC02B9714F9000C70F5 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028BBF2B9714F9000C70F5 /* Label.swift */; };
+		0F028BC92B973630000C70F5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028BC82B973630000C70F5 /* Colors.swift */; };
+		0F028BCD2B9739DB000C70F5 /* EmptyPlantTrackCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028BCC2B9739DB000C70F5 /* EmptyPlantTrackCard.swift */; };
+		0F028BCF2B9739ED000C70F5 /* EmptyPlantTrackCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F028BCE2B9739ED000C70F5 /* EmptyPlantTrackCard.xib */; };
+		0F028BD52B974DA4000C70F5 /* HomeDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028BD42B974DA4000C70F5 /* HomeDisplay.swift */; };
+		0F028BDC2B974E0A000C70F5 /* PlantsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F028BDB2B974E0A000C70F5 /* PlantsItem.swift */; };
 		0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */; };
 		0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */; };
 		0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F07FBDB2B90B26000E2ED20 /* HTTPTask.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F028BBF2B9714F9000C70F5 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		0F028BC82B973630000C70F5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0F028BCC2B9739DB000C70F5 /* EmptyPlantTrackCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPlantTrackCard.swift; sourceTree = "<group>"; };
+		0F028BCE2B9739ED000C70F5 /* EmptyPlantTrackCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyPlantTrackCard.xib; sourceTree = "<group>"; };
+		0F028BD42B974DA4000C70F5 /* HomeDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDisplay.swift; sourceTree = "<group>"; };
+		0F028BDB2B974E0A000C70F5 /* PlantsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsItem.swift; sourceTree = "<group>"; };
 		0F07FBC82B84BEC500E2ED20 /* ConfigLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigLoader.swift; sourceTree = "<group>"; };
 		0F07FBCB2B84BF7700E2ED20 /* Bundle+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Additions.swift"; sourceTree = "<group>"; };
 		0F07FBCE2B84C40300E2ED20 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
@@ -79,6 +91,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F028BBD2B9714DD000C70F5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BBE2B9714EF000C70F5 /* Label */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0F028BBE2B9714EF000C70F5 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BBF2B9714F9000C70F5 /* Label.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		0F028BC12B9732BE000C70F5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BC22B9732ED000C70F5 /* Cells */,
+				0F028BD42B974DA4000C70F5 /* HomeDisplay.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0F028BC22B9732ED000C70F5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BCA2B9738E5000C70F5 /* EmptyPlantTrackCard */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F028BC72B973516000C70F5 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BC82B973630000C70F5 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		0F028BCA2B9738E5000C70F5 /* EmptyPlantTrackCard */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BCC2B9739DB000C70F5 /* EmptyPlantTrackCard.swift */,
+				0F028BCE2B9739ED000C70F5 /* EmptyPlantTrackCard.xib */,
+			);
+			path = EmptyPlantTrackCard;
+			sourceTree = "<group>";
+		};
+		0F028BD92B974DF2000C70F5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BDA2B974DF6000C70F5 /* Model */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		0F028BDA2B974DF6000C70F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F028BDB2B974E0A000C70F5 /* PlantsItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0F07FBC72B84BEB300E2ED20 /* ConfigLoader */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +279,8 @@
 		3F7EDD0F2B668F1900946FF9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0F028BC72B973516000C70F5 /* Colors */,
+				0F028BBD2B9714DD000C70F5 /* UI */,
 				0F4A86182B92085E00EC6BD9 /* UserDefaultsKeys */,
 				3F7EDD272B66920500946FF9 /* Localization */,
 			);
@@ -258,10 +338,12 @@
 		3F7EDD1B2B66901700946FF9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0F028BD92B974DF2000C70F5 /* API */,
+				0F028BC12B9732BE000C70F5 /* UI */,
+				3F7EDD232B66905B00946FF9 /* Home.storyboard */,
 				3F7EDD1D2B66903300946FF9 /* HomeViewController.swift */,
 				3F7EDD1F2B66903F00946FF9 /* HomeViewModel.swift */,
 				3F7EDD212B66904900946FF9 /* HomeCoordinator.swift */,
-				3F7EDD232B66905B00946FF9 /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -376,6 +458,7 @@
 				3F7EDD242B66905B00946FF9 /* Home.storyboard in Resources */,
 				3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */,
 				3F7EDD3D2B6694CD00946FF9 /* Splash.storyboard in Resources */,
+				0F028BCF2B9739ED000C70F5 /* EmptyPlantTrackCard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +496,8 @@
 				0F07FBDE2B90B48000E2ED20 /* TokenItem.swift in Sources */,
 				3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */,
 				3F7EDD222B66904900946FF9 /* HomeCoordinator.swift in Sources */,
+				0F028BC02B9714F9000C70F5 /* Label.swift in Sources */,
+				0F028BDC2B974E0A000C70F5 /* PlantsItem.swift in Sources */,
 				3F7EDD392B6694BA00946FF9 /* SplashViewModel.swift in Sources */,
 				3F7EDD1A2B66901400946FF9 /* TabBarCoordinator.swift in Sources */,
 				0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */,
@@ -420,10 +505,13 @@
 				3F7EDD182B668FAD00946FF9 /* Coordinator.swift in Sources */,
 				0F4A861A2B92087100EC6BD9 /* UserDefaultsKeys.swift in Sources */,
 				3F7EDD312B66927B00946FF9 /* String+Additions.swift in Sources */,
+				0F028BC92B973630000C70F5 /* Colors.swift in Sources */,
 				3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */,
 				3F7EDD1E2B66903300946FF9 /* HomeViewController.swift in Sources */,
+				0F028BD52B974DA4000C70F5 /* HomeDisplay.swift in Sources */,
 				3F7EDD162B668FA400946FF9 /* ApplicationCoordinator.swift in Sources */,
 				0F4A86172B92083500EC6BD9 /* UserDefaults+Additions.swift in Sources */,
+				0F028BCD2B9739DB000C70F5 /* EmptyPlantTrackCard.swift in Sources */,
 				0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */,
 				3F7EDD372B6694B000946FF9 /* SplashViewController.swift in Sources */,
 				0F4A860E2B91FC1D00EC6BD9 /* TokenService.swift in Sources */,
