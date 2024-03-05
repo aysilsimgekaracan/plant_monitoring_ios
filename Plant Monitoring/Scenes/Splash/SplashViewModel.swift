@@ -10,23 +10,23 @@ import PromiseKit
 
 class SplashViewModel {
   var coordinator: SplashCoordinator!
-  
+
   init(coordinator: SplashCoordinator!) {
     self.coordinator = coordinator
   }
-  
+
   func start() -> Promise<SplashDisplay> {
     return Promise { seal in
-      TokenService.shared.start().done { token in
+      TokenService.shared.start().done { _ in
         seal.fulfill(SplashDisplay(isAuthSuccess: true))
-      }.catch { error in
+      }.catch { _ in
         seal.fulfill(SplashDisplay(isAuthSuccess: false))
       }
     }
   }
-  
+
   // MARK: - Navigation
-  
+
   func proceed() {
     coordinator.startTabBar()
   }

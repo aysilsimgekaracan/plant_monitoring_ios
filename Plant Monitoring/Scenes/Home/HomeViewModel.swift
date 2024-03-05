@@ -9,9 +9,9 @@ import Foundation
 
 class HomeViewModel {
   var coordinator: HomeCoordinator!
-  
+
   init(coordinator: HomeCoordinator) {
     self.coordinator = coordinator
   }
-  
+
 }

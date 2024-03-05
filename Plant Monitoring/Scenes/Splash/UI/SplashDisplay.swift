@@ -9,7 +9,7 @@ import UIKit
 
 public struct SplashDisplay {
   public let isAuthSuccess: Bool
-  
+
   public init(isAuthSuccess: Bool) {
     self.isAuthSuccess = isAuthSuccess
   }
