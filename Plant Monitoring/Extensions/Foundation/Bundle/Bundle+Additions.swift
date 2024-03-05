@@ -9,6 +9,8 @@ import Foundation
 
 public extension Bundle {
   func infoDictionaryValue<V>(forKey key: String) -> V {
+    // swiftlint:disable force_cast
     return object(forInfoDictionaryKey: key) as! V
+    // swiftlint:enable force_cast
   }
 }

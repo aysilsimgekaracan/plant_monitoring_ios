@@ -8,7 +8,7 @@
 import UIKit
 
 public final class SplashViewController: UIViewController {
- 
+
   // MARK: - IBOutlets
 
   @IBOutlet weak var animationView: UIView!
@@ -29,24 +29,24 @@ public final class SplashViewController: UIViewController {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
   }
-  
+
   required init?(coder: NSCoder) {
     super.init(coder: coder)
   }
-  
+
   public override func viewDidLoad() {
     animateBackgroundAndProceed()
     getDisplay()
   }
-  
+
   // MARK: - Private Helpers
-  
+
   private func getDisplay() {
     viewModel.start().done { display in
       self.display = display
     }.cauterize()
   }
-  
+
   private func animateBackgroundAndProceed() {
     UIView.animate(withDuration: animationDuration) {
       self.animationView.layer.cornerRadius = 120
@@ -57,7 +57,7 @@ public final class SplashViewController: UIViewController {
       self.animationView.layoutIfNeeded()
     }
   }
-  
+
   private func proceed() {
     DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration) {
       if self.display.isAuthSuccess {
@@ -68,12 +68,11 @@ public final class SplashViewController: UIViewController {
         let okButton = UIAlertAction(title: "OK", style: .cancel) { _ in
           self.getDisplay()
         }
-        
+
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
       }
     }
   }
-  
-  
+
 }
