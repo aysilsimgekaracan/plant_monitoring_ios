@@ -8,3 +8,8 @@
 
 // MARK: - TabBar
 "tab.home" = "Home";
+"tab.plants" = "Plants";
+
+// MARK: - TabBar
+"home.empty.plant.track.card.title" = "Track Your Favorite Plants";
+"home.empty.plant.track.card.detail" = "To track a plant, go to Plants page and follow your favorite plant.";

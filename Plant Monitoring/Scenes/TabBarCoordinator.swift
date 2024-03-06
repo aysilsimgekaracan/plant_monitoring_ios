@@ -14,6 +14,9 @@ class TabBarCoordinator: Coordinator {
     let homeCoordinator = HomeCoordinator()
     homeCoordinator.start()
 
-    tabBarController.viewControllers = [homeCoordinator.navigationController]
+    let plantsCoordinator = PlantsCoordinator()
+    plantsCoordinator.start()
+
+    tabBarController.viewControllers = [homeCoordinator.navigationController, plantsCoordinator.navigationController]
   }
 }
