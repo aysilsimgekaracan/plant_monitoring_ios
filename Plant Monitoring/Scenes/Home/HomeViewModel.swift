@@ -7,11 +7,15 @@
 
 import Foundation
 
-class HomeViewModel {
+public final class HomeViewModel {
   var coordinator: HomeCoordinator!
 
   init(coordinator: HomeCoordinator) {
     self.coordinator = coordinator
+  }
+  
+  func showPlants() {
+    coordinator.showPlants()
   }
 
 }

@@ -83,5 +83,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     return height + spacing
   }
-  
+
+  public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let cell = tableView.cellForRow(at: indexPath) as? EmptyPlantTrackCard {
+      cell.contentStackView.animateTappedEffect()
+      viewModel.showPlants()
+    }
+  }
+
 }
