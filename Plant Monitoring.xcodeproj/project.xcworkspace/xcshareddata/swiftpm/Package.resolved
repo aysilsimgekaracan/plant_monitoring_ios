@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SwiftKickMobile/SwiftMessages",
       "state" : {
-        "revision" : "b899be48a61ddb209695a8d5e411189b704a7fa3",
-        "version" : "10.0.0"
+        "revision" : "62e12e138fc3eedf88c7553dd5d98712aa119f40",
+        "version" : "9.0.9"
       }
     }
   ],
