@@ -8,3 +8,8 @@
 
 // MARK: - TabBar
 "tab.home" = "Home";
+
+// MARK: - NotificationService
+"notification.service.error.title" = "Error";
+"notification.service.http.request.error.body" = "Check your internet connection.";
+"notification.service.button.title" = "OK";

@@ -8,3 +8,8 @@
 
 // MARK: - TabBar
 "tab.home" = "Ana Sayfa";
+
+// MARK: - NotificationService
+"notification.service.error.title" = "Hata";
+"notification.service.http.request.error.body" = "İnternet bağlantınızı kontrol edin.";
+"notification.service.button.title" = "Tamam";
