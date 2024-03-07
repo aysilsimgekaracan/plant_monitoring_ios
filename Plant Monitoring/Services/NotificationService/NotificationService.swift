@@ -33,83 +33,79 @@ public final class NotificationService {
   public static var shared = NotificationService()
   public init() {}
 
-  @MainActor func showNotification(layout: NotificationLayout, theme: NotificationTheme, title: String, body: String, buttonTitle: String) {
+  func showNotification(layout: NotificationLayout,
+                        theme: NotificationTheme,
+                        title: String,
+                        body: String,
+                        buttonTitle: String,
+                        completion: @escaping () -> Void) {
     let view: MessageView
     let iconStyle: IconStyle = .default
-    var isHapticOn = false
-    var isDropShadowOn = true
     var shouldShowButton: Bool
     var config = SwiftMessages.Config()
 
     switch layout {
     case .card:
       view = MessageView.viewFromNib(layout: .cardView)
-      isHapticOn = false
       shouldShowButton = true
       config.duration = .forever
       config.presentationStyle = .center
-      config.dimMode = .blur(style: .dark, alpha: 1.0, interactive: true)
+      config.dimMode = .blur(style: .dark, alpha: 0.5, interactive: true)
     case .tab:
       view = MessageView.viewFromNib(layout: .tabView)
-      isHapticOn = true
       shouldShowButton = false
       config.duration = .seconds(seconds: 1)
       config.presentationStyle = .top
       config.interactiveHide = true
     case .statusLine:
       view = MessageView.viewFromNib(layout: .statusLine)
-      isHapticOn = false
       shouldShowButton = false
       config.duration = .seconds(seconds: 1)
       config.presentationStyle = .top
     case .centered:
       view = MessageView.viewFromNib(layout: .centeredView)
-      isHapticOn = false
       shouldShowButton = true
       config.duration = .forever
       config.presentationStyle = .center
-      config.dimMode = .blur(style: .dark, alpha: 1.0, interactive: true)
+      config.dimMode = .blur(style: .dark, alpha: 0.5, interactive: true)
     case .message:
       view = MessageView.viewFromNib(layout: .messageView)
-      isHapticOn = false
       shouldShowButton = true
       config.duration = .forever
-      config.presentationStyle = .center
-      config.dimMode = .blur(style: .dark, alpha: 1.0, interactive: true)
+      config.presentationStyle = .bottom
     }
-    
-    view.configureContent(title: title, body: body, iconImage: nil, iconText: nil, buttonImage: nil, buttonTitle: buttonTitle, buttonTapHandler: {_ in
-      SwiftMessages.hideAll()})
+
+    view.configureContent(title: title,
+                          body: body,
+                          iconImage: nil,
+                          iconText: nil,
+                          buttonImage: nil,
+                          buttonTitle: buttonTitle,
+                          buttonTapHandler: { _ in
+      SwiftMessages.hideAll()
+      completion()})
+    view.configureDropShadow()
 
     switch theme {
     case .info:
-      view.configureTheme(.info, iconStyle: iconStyle, includeHaptic: isHapticOn)
+      view.configureTheme(.info, iconStyle: iconStyle)
       view.accessibilityPrefix = "info"
     case .success:
-      view.configureTheme(.success, iconStyle: iconStyle, includeHaptic: isHapticOn)
+      view.configureTheme(.success, iconStyle: iconStyle)
       view.accessibilityPrefix = "success"
     case .warning:
-      view.configureTheme(.warning, iconStyle: iconStyle, includeHaptic: isHapticOn)
+      view.configureTheme(.warning, iconStyle: iconStyle)
       view.accessibilityPrefix = "warning"
     case .error:
-      view.configureTheme(.error, iconStyle: iconStyle, includeHaptic: isHapticOn)
+      view.configureTheme(.error, iconStyle: iconStyle)
       view.accessibilityPrefix = "error"
-    }
-
-    if isDropShadowOn {
-        view.configureDropShadow()
     }
 
     if !shouldShowButton {
         view.button?.isHidden = true
-    }
-    
-    if view.defaultHaptic == nil && isHapticOn {
-        config.haptic = .success
     }
 
     SwiftMessages.show(config: config, view: view)
   }
 
 }
-
