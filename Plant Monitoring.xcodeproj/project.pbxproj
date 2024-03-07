@@ -16,6 +16,8 @@
 		0F4A86172B92083500EC6BD9 /* UserDefaults+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A86162B92083500EC6BD9 /* UserDefaults+Additions.swift */; };
 		0F4A861A2B92087100EC6BD9 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A86192B92087100EC6BD9 /* UserDefaultsKeys.swift */; };
 		0F4A861D2B95E3AA00EC6BD9 /* SplashDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */; };
+		0FC8DCB42B999E0A0070B4F0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 0FC8DCB32B999E0A0070B4F0 /* SwiftMessages */; };
+		0FC8DCB62B999E0A0070B4F0 /* SwiftMessages-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0FC8DCB52B999E0A0070B4F0 /* SwiftMessages-Dynamic */; };
 		3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */; };
 		3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFD2B668CBC00946FF9 /* SceneDelegate.swift */; };
 		3F7EDD052B668CBF00946FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EDD042B668CBF00946FF9 /* Assets.xcassets */; };
@@ -72,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FC8DCB42B999E0A0070B4F0 /* SwiftMessages in Frameworks */,
+				0FC8DCB62B999E0A0070B4F0 /* SwiftMessages-Dynamic in Frameworks */,
 				0F4A86112B92017F00EC6BD9 /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +328,8 @@
 			name = "Plant Monitoring";
 			packageProductDependencies = (
 				0F4A86102B92017F00EC6BD9 /* PromiseKit */,
+				0FC8DCB32B999E0A0070B4F0 /* SwiftMessages */,
+				0FC8DCB52B999E0A0070B4F0 /* SwiftMessages-Dynamic */,
 			);
 			productName = "Plant Monitoring";
 			productReference = 3F7EDCF82B668CBC00946FF9 /* Plant Monitoring.app */;
@@ -356,6 +362,7 @@
 			mainGroup = 3F7EDCEF2B668CBC00946FF9;
 			packageReferences = (
 				0F4A860F2B92017E00EC6BD9 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				0FC8DCB22B999E0A0070B4F0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = 3F7EDCF92B668CBC00946FF9 /* Products */;
 			projectDirPath = "";
@@ -652,6 +659,14 @@
 				minimumVersion = 8.1.1;
 			};
 		};
+		0FC8DCB22B999E0A0070B4F0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -659,6 +674,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F4A860F2B92017E00EC6BD9 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
+		};
+		0FC8DCB32B999E0A0070B4F0 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FC8DCB22B999E0A0070B4F0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
+		0FC8DCB52B999E0A0070B4F0 /* SwiftMessages-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FC8DCB22B999E0A0070B4F0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = "SwiftMessages-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
