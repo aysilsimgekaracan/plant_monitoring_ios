@@ -27,4 +27,10 @@ public final class HomeCoordinator: Coordinator {
     navigationController.isNavigationBarHidden = true
     navigationController.viewControllers = [viewController]
   }
+
+  // MARK: - Navigation
+
+  func showPlants() {
+    navigationController.tabBarController?.selectedIndex = 1
+  }
 }
