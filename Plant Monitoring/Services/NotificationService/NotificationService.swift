@@ -51,6 +51,7 @@ public final class NotificationService {
       config.duration = .forever
       config.presentationStyle = .center
       config.dimMode = .blur(style: .dark, alpha: 0.5, interactive: true)
+      config.interactiveHide = false
     case .tab:
       view = MessageView.viewFromNib(layout: .tabView)
       shouldShowButton = false
@@ -62,12 +63,14 @@ public final class NotificationService {
       shouldShowButton = false
       config.duration = .seconds(seconds: 1)
       config.presentationStyle = .top
+      config.interactiveHide = false
     case .centered:
       view = MessageView.viewFromNib(layout: .centeredView)
       shouldShowButton = true
       config.duration = .forever
       config.presentationStyle = .center
       config.dimMode = .blur(style: .dark, alpha: 0.5, interactive: true)
+      config.interactiveHide = false
     case .message:
       view = MessageView.viewFromNib(layout: .messageView)
       shouldShowButton = true
