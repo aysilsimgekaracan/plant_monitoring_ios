@@ -8,8 +8,13 @@
 
 // MARK: - TabBar
 "tab.home" = "Ana Sayfa";
+"tab.plants" = "Bitkiler";
 
 // MARK: - NotificationService
 "notification.service.error.title" = "Hata";
 "notification.service.http.request.error.body" = "İnternet bağlantınızı kontrol edin.";
 "notification.service.button.title" = "Tamam";
+
+// MARK: - TabBar
+"home.empty.plant.track.card.title" = "Favori Bitkilerini Takip Et";
+"home.empty.plant.track.card.detail" = "Bitkilerim sayfasına git ve favori bitkini takip et.";
