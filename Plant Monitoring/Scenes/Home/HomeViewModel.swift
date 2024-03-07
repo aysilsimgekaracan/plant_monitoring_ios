@@ -13,7 +13,7 @@ public final class HomeViewModel {
   init(coordinator: HomeCoordinator) {
     self.coordinator = coordinator
   }
-  
+
   func showPlants() {
     coordinator.showPlants()
   }

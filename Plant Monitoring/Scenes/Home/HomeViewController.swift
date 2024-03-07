@@ -16,6 +16,7 @@ public final class HomeViewController: UIViewController {
   // MARK: - Properties
 
   var viewModel: HomeViewModel!
+
   var display: HomeDisplay!
 
   private enum TableViewCellType: Int, CaseIterable {

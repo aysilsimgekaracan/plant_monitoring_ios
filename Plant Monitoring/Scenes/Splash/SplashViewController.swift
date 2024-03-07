@@ -64,13 +64,13 @@ public final class SplashViewController: UIViewController {
         self.viewModel.proceed()
       } else {
         // Give alert to user if request is not successfull, and try requesting again
-        let alert = UIAlertController(title: "Error", message: "Check your network", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .cancel) { _ in
-          self.getDisplay()
-        }
 
-        alert.addAction(okButton)
-        self.present(alert, animated: true, completion: nil)
+        NotificationService.shared.showNotification(layout: .centered,
+                                                    theme: .error,
+                                                    title: "notification.service.error.title".localized(),
+                                                    body: "notification.service.http.request.error.body".localized(),
+                                                    buttonTitle: "notification.service.button.title".localized(),
+                                                    completion: { self.getDisplay() })
       }
     }
   }
