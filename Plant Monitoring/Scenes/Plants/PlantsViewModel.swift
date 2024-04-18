@@ -24,4 +24,9 @@ public final class PlantsViewModel {
       }
     }
   }
+  
+  public func showPlantDetail(for plant: PlantItem) {
+    coordinator.showPlantDetail(with: plant)
+  }
+
 }

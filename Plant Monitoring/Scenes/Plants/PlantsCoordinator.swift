@@ -27,4 +27,11 @@ public final class PlantsCoordinator: Coordinator {
     navigationController.viewControllers = [viewController]
   }
 
+  // MARK: - Navigation
+
+  public func showPlantDetail(with plant: PlantItem) {
+    let coordinator = PlantDetailCoordinator(navigationController: navigationController, plant: plant)
+    coordinator.start()
+  }
+
 }
