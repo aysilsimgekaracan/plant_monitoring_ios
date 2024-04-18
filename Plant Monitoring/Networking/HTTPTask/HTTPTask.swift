@@ -11,3 +11,11 @@ public enum HTTPMethod: String {
   case get = "GET"
   case post = "POST"
 }
+
+protocol HTTPTask {
+  associatedtype ResponseType: Codable, Decodable
+  var endpoint: String { get }
+  var method: HTTPMethod { get }
+  var parameters: [String: Any]? { get }
+  var additionalHeaders: [String: Any]? { get }
+}

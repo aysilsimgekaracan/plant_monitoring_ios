@@ -66,7 +66,7 @@ public final class SplashViewController: UIViewController {
         // Give alert to user if request is not successfull, and try requesting again
 
         NotificationService.shared.showNotification(layout: .centered,
-                                                    theme: .error,
+                                                    theme: .errorb,
                                                     title: "notification.service.error.title".localized(),
                                                     body: "notification.service.http.request.error.body".localized(),
                                                     buttonTitle: "notification.service.button.title".localized(),

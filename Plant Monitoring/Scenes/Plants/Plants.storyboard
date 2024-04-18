@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,9 +16,46 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-fJ-7kO" userLabel="Plants" customClass="Label" customModule="Plant_Monitoring" customModuleProvider="target">
+                                <rect key="frame" x="23.999999999999993" y="83" width="82.333333333333314" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="tab.plants"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-8H-AkA">
+                                <rect key="frame" x="0.0" y="140.66666666666669" width="393" height="677.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-8j-ZVO">
+                                <rect key="frame" x="305" y="731" width="64" height="62.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="01X-pw-V8w"/>
+                                    <constraint firstAttribute="width" constant="64" id="WgP-CD-NS3"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="plant-crystal-green"/>
+                        <constraints>
+                            <constraint firstItem="hvo-fJ-7kO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Axq-l0-7YA"/>
+                            <constraint firstItem="hvo-fJ-7kO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="HTp-uJ-jEM"/>
+                            <constraint firstItem="wbR-8H-AkA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="IUH-fA-rTm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wbR-8H-AkA" secondAttribute="bottom" id="IqU-EH-PMh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="gOe-8j-ZVO" secondAttribute="bottom" constant="24" id="RKi-37-uKe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gOe-8j-ZVO" secondAttribute="trailing" constant="24" id="a07-hp-fb3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wbR-8H-AkA" secondAttribute="trailing" id="iv5-w9-g24"/>
+                            <constraint firstItem="wbR-8H-AkA" firstAttribute="top" secondItem="hvo-fJ-7kO" secondAttribute="bottom" constant="24" id="mP7-TB-LAy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="wbR-8H-AkA" id="5Kh-1p-sbk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,8 +63,9 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="plant-crystal-green">
+            <color red="0.6588235294117647" green="0.83529411764705885" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

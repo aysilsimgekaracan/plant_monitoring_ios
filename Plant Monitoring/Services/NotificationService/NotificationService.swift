@@ -20,7 +20,7 @@ enum NotificationTheme {
   case info
   case success
   case warning
-  case error
+  case errorb
 }
 
 enum NotificationStyle {
@@ -99,7 +99,7 @@ public final class NotificationService {
     case .warning:
       view.configureTheme(.warning, iconStyle: iconStyle)
       view.accessibilityPrefix = "warning"
-    case .error:
+    case .errorb:
       view.configureTheme(.error, iconStyle: iconStyle)
       view.accessibilityPrefix = "error"
     }
