@@ -19,3 +19,5 @@
 "home.empty.plant.track.card.title" = "Track Your Favorite Plants";
 "home.empty.plant.track.card.detail" = "To track a plant, go to Plants page and follow your favorite plant.";
 
+// MARK: - PlantDetail
+"plant.detail.last.update" = "Last update at: ";
