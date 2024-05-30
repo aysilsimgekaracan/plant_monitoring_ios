@@ -8,6 +8,13 @@
 import Foundation
 import PromiseKit
 
+/// Use for sending API request.
+///
+/// To send a request:
+/// ```swift
+/// APIService.shared.performRequest<T: HTTPTask>(task: T)
+/// ```
+
 public final class APIService {
   public static var shared = APIService()
 
@@ -19,6 +26,9 @@ public final class APIService {
                                    delegate: APIURLSessionDelegate.sessionDelegate,
                                    delegateQueue: nil)
 
+  /// Sends an API request
+  /// - Parameter T: ``HTTPTask``
+  /// - Returns: ``HTTPTask/ResponseType``
   func performRequest<T: HTTPTask>(task: T) -> Promise<T.ResponseType> {
     return Promise { seal in
       // Check endpoint

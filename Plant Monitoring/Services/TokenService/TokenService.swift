@@ -8,6 +8,7 @@
 import Foundation
 import PromiseKit
 
+/// Gets the authentication token from the API.
 public final class TokenService {
   public static var shared = TokenService()
 

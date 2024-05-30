@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Application Coordinator is the root coordinator. It initializes and start Tab Bar controller.
 class ApplicationCoordinator: Coordinator {
   public static var shared = ApplicationCoordinator()
 
