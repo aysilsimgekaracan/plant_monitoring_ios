@@ -6,6 +6,19 @@
 //
 
 import UIKit
+/// Use Colors struct to access custom colors programmatically.
+///
+/// When you want to add a new color, add color to Assets catalog and define the color in there.
+///
+/// ```swift
+/// public static let newColor = UIColor(named: "newColor")
+/// ```
+///
+/// Use programatically when needed:
+///
+/// ```swift
+/// Colors.newColor
+/// ```
 
 public struct Colors {
   public static let plantCrystalGreen = UIColor(named: "plant-crystal-green")!

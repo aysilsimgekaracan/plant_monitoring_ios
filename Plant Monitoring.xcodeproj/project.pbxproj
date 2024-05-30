@@ -31,6 +31,7 @@
 		0F4A861D2B95E3AA00EC6BD9 /* SplashDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */; };
 		0F8FE1D92B99E6EB00F36B00 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8FE1D82B99E6EB00F36B00 /* SwiftMessages */; };
 		0FAC58FC2C05C6B300197153 /* PlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC58FB2C05C6B300197153 /* PlantCell.swift */; };
+		0FAC58FE2C05FA4C00197153 /* PlantMonitoring.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC58FD2C05FA4C00197153 /* PlantMonitoring.docc */; };
 		0FC8DCBC2B99A3B20070B4F0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8DCBB2B99A3B20070B4F0 /* NotificationService.swift */; };
 		0FEB092B2BA09F530039396F /* APIURLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB092A2BA09F530039396F /* APIURLSessionDelegate.swift */; };
 		3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDCFB2B668CBC00946FF9 /* AppDelegate.swift */; };
@@ -90,6 +91,7 @@
 		0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDisplay.swift; sourceTree = "<group>"; };
 		0F9622A32BCE6BBA00C6DD89 /* PlantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantCell.xib; sourceTree = "<group>"; };
 		0FAC58FB2C05C6B300197153 /* PlantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantCell.swift; sourceTree = "<group>"; };
+		0FAC58FD2C05FA4C00197153 /* PlantMonitoring.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = PlantMonitoring.docc; sourceTree = "<group>"; };
 		0FC8DCBB2B99A3B20070B4F0 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		0FEB092A2BA09F530039396F /* APIURLSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLSessionDelegate.swift; sourceTree = "<group>"; };
 		3F7EDCF82B668CBC00946FF9 /* Plant Monitoring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plant Monitoring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -418,8 +420,9 @@
 		3F7EDD122B668F3300946FF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F7EDD3E2B66981E00946FF9 /* LaunchScreen.storyboard */,
 				3F7EDD042B668CBF00946FF9 /* Assets.xcassets */,
+				3F7EDD3E2B66981E00946FF9 /* LaunchScreen.storyboard */,
+				0FAC58FD2C05FA4C00197153 /* PlantMonitoring.docc */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				0F028BDC2B974E0A000C70F5 /* PlantsItem.swift in Sources */,
 				3F7EDD392B6694BA00946FF9 /* SplashViewModel.swift in Sources */,
 				3F7EDD1A2B66901400946FF9 /* TabBarCoordinator.swift in Sources */,
+				0FAC58FE2C05FA4C00197153 /* PlantMonitoring.docc in Sources */,
 				0F028BE12B976576000C70F5 /* PlantsViewModel.swift in Sources */,
 				0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */,
 				3F7EDD202B66903F00946FF9 /* HomeViewModel.swift in Sources */,

@@ -29,10 +29,27 @@ enum NotificationStyle {
   case center
 }
 
+/// Show notifications to user.
+///
+/// Built using SwiftMessages
+/// Usage
+///
+/// ```swift
+/// NotificationService.shared.showNotification(...)
+/// ```
+/// Check ``showNotification(layout:theme:title:body:buttonTitle:completion:)`` for detailed explanation.
 public final class NotificationService {
   public static var shared = NotificationService()
   public init() {}
-
+  
+  /// Shows notification
+  /// - Parameters:
+  ///   - layout: The ``NotificationLayout`` option to use.
+  ///   - theme: The ``NotificationTheme`` option to use
+  ///   - title:
+  ///   - body:
+  ///   - buttonTitle:
+  ///   - completion: Give action when the button is pressed (if needed)
   func showNotification(layout: NotificationLayout,
                         theme: NotificationTheme,
                         title: String,
