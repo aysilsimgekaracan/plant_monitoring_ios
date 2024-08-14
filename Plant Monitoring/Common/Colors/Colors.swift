@@ -25,4 +25,5 @@ public struct Colors {
   public static let plantLightPastelPurple = UIColor(named: "plant-light-pastel-purple")!
   public static let plantDeepMossGreen = UIColor(named: "plant-deep-moss-green")!
   public static let plantMiddleGreen = UIColor(named: "plant-middle-green")!
+  public static let plantLightBlue = UIColor(named: "plant-light-blue")!
 }

@@ -18,3 +18,6 @@
 // MARK: - TabBar
 "home.empty.plant.track.card.title" = "Favori Bitkilerini Takip Et";
 "home.empty.plant.track.card.detail" = "Bitkilerim sayfasına git ve favori bitkini takip et.";
+
+// MARK: - PlantDetail
+"plant.detail.last.update" = "Son güncelleme: ";

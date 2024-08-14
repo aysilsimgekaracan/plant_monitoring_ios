@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vo-nx-ufp">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="644"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="688.33333333333337"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="mock-plant" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-09-6ky">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="350"/>
@@ -38,7 +38,7 @@
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-li-lLA">
-                                                <rect key="frame" x="0.0" y="350" width="393" height="294"/>
+                                                <rect key="frame" x="0.0" y="350" width="393" height="338.33333333333326"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygD-Dh-DCe">
                                                         <rect key="frame" x="0.0" y="0.0" width="393" height="26.333333333333332"/>
@@ -121,6 +121,21 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V6A-3l-NaW">
+                                                        <rect key="frame" x="0.0" y="306" width="393" height="20.333333333333314"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPB-4J-egF" customClass="StatusBarChart" customModule="Plant_Monitoring" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelsdfsdkşfklskdlşfksdşf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNF-rb-gqW">
+                                                        <rect key="frame" x="0.0" y="338.33333333333337" width="393" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </stackView>
@@ -128,10 +143,10 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Woi-HJ-s7P" firstAttribute="bottom" secondItem="Wvc-09-6ky" secondAttribute="bottom" id="Enp-m4-efF"/>
+                                            <constraint firstAttribute="bottom" secondItem="r5E-li-lLA" secondAttribute="bottom" id="LkR-aq-FON"/>
                                             <constraint firstAttribute="trailing" secondItem="Wvc-09-6ky" secondAttribute="trailing" id="QCc-xU-W4X"/>
                                             <constraint firstItem="Woi-HJ-s7P" firstAttribute="leading" secondItem="8Vo-nx-ufp" secondAttribute="leading" id="QfF-06-Kpn"/>
                                             <constraint firstItem="Wvc-09-6ky" firstAttribute="top" secondItem="8Vo-nx-ufp" secondAttribute="top" id="Ui3-sY-feh"/>
-                                            <constraint firstAttribute="bottom" secondItem="r5E-li-lLA" secondAttribute="bottom" id="XAN-y1-Xm5"/>
                                             <constraint firstItem="r5E-li-lLA" firstAttribute="top" secondItem="Wvc-09-6ky" secondAttribute="bottom" id="eKp-dm-ywJ"/>
                                             <constraint firstAttribute="trailing" secondItem="Woi-HJ-s7P" secondAttribute="trailing" id="hi9-hH-hMT"/>
                                             <constraint firstItem="Wvc-09-6ky" firstAttribute="leading" secondItem="8Vo-nx-ufp" secondAttribute="leading" id="oPI-sn-IDm"/>
@@ -194,10 +209,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentStatusBar" destination="FPB-4J-egF" id="QAV-ix-jaa"/>
                         <outlet property="plantDescriptionTitle" destination="Roe-vY-0xb" id="AJm-KQ-Eez"/>
                         <outlet property="plantLocationTitle" destination="QN8-2y-jl9" id="m0w-1a-Jla"/>
                         <outlet property="plantTitleLabel" destination="ygD-Dh-DCe" id="wlO-8u-jzc"/>
                         <outlet property="plantTypeTitle" destination="6UY-2F-8hl" id="mTc-xU-p0f"/>
+                        <outlet property="statusStackView" destination="V6A-3l-NaW" id="Frd-Pe-asc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="meF-MD-Qth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,10 +235,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

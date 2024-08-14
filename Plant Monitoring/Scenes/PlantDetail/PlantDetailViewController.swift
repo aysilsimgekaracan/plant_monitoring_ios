@@ -15,6 +15,8 @@ public final class PlantDetailViewController: UIViewController {
   @IBOutlet weak var plantLocationTitle: UILabel!
   @IBOutlet weak var plantTypeTitle: UILabel!
   @IBOutlet weak var plantDescriptionTitle: UITextView!
+  @IBOutlet weak var statusStackView: UIStackView!
+  @IBOutlet weak var currentStatusBar: StatusBar!
 
   // MARK: - Properties
 
@@ -50,5 +52,8 @@ public final class PlantDetailViewController: UIViewController {
     plantLocationTitle.text = viewModel.plant.location
     plantTypeTitle.text = viewModel.plant.type
     plantDescriptionTitle.text = viewModel.plant.description
+
+    currentStatusBar.configure(humidityLevel: "70", temperatureLevel: "25", lightLevel: "3")
+
   }
 }
