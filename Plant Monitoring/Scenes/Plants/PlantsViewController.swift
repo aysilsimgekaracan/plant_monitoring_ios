@@ -85,6 +85,8 @@ extension PlantsViewController: UITableViewDelegate, UITableViewDataSource {
   public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     guard let cell = tableView.cellForRow(at: indexPath) as? PlantCell else { return }
     cell.animateTappedEffect()
+
+    viewModel.showPlantDetail(for: plants[indexPath.row])
   }
 
 }
