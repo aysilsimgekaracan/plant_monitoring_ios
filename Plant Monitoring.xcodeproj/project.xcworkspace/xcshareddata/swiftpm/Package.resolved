@@ -1,4 +1,5 @@
 {
+  "originHash" : "b5e7d3a272c206fd18b5cc054938df4c1045eadfd2993c843891c4ec8ad599e3",
   "pins" : [
     {
       "identity" : "promisekit",
@@ -19,5 +20,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
