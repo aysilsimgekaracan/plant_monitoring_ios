@@ -54,12 +54,12 @@
 		3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EDD3E2B66981E00946FF9 /* LaunchScreen.storyboard */; };
 		8B45AB482C6CF1D700B5C6FE /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB3E2C6CF1D700B5C6FE /* StatusBar.swift */; };
 		8B45AB492C6CF1D700B5C6FE /* StatusBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB3F2C6CF1D700B5C6FE /* StatusBar.xib */; };
-		8B45AB4A2C6CF1D700B5C6FE /* PlantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */; };
 		8B45AB4B2C6CF1D700B5C6FE /* PlantDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB442C6CF1D700B5C6FE /* PlantDetailCoordinator.swift */; };
 		8B45AB4C2C6CF1D700B5C6FE /* PlantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB452C6CF1D700B5C6FE /* PlantDetailViewController.swift */; };
 		8B45AB4D2C6CF1D700B5C6FE /* PlantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB462C6CF1D700B5C6FE /* PlantDetailViewModel.swift */; };
 		8B45AB562C6CF30E00B5C6FE /* PlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB532C6CF30E00B5C6FE /* PlantCell.swift */; };
 		8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B84A8E22C6DE56000592EB6 /* PlantCell.xib */; };
+		8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -637,14 +637,14 @@
 			files = (
 				3F7EDD2A2B66922700946FF9 /* Localizable.strings in Resources */,
 				3F7EDD052B668CBF00946FF9 /* Assets.xcassets in Resources */,
+				8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */,
 				8B45AB492C6CF1D700B5C6FE /* StatusBar.xib in Resources */,
 				0F028BE52B976587000C70F5 /* Plants.storyboard in Resources */,
 				3F7EDD242B66905B00946FF9 /* Home.storyboard in Resources */,
-				8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */,
 				3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */,
+				8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */,
 				3F7EDD3D2B6694CD00946FF9 /* Splash.storyboard in Resources */,
 				0F028BCF2B9739ED000C70F5 /* EmptyPlantTrackCard.xib in Resources */,
-				8B45AB4A2C6CF1D700B5C6FE /* PlantDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

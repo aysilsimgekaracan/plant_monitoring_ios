@@ -1,5 +1,5 @@
 //
-//  StatusBarChart.swift
+//  StatusBar.swift
 //  Plant Monitoring
 //
 //  Created by Ayşıl Simge Karacan on 18.04.2024.
@@ -41,7 +41,7 @@ public final class StatusBar: UIView {
   }
 
   private func commonInit() {
-    Bundle.main.loadNibNamed("StatusBarChart", owner: self, options: nil)
+    Bundle.main.loadNibNamed("StatusBar", owner: self, options: nil)
     addSubview(contentView)
     contentView.frame = bounds
     contentView.autoresizingMask = [.flexibleWidth]
