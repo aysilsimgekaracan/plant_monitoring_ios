@@ -52,8 +52,7 @@ public final class TokenService {
 
       URLSession.shared.dataTask(with: request) { data, response, error in
         print("-------- Response HTTP Request ---------")
-        print("Response Data: \(String(data: data!, encoding: .utf8) ?? "")")
-        // print("Response: \(String(describing: response))")
+        print("Response: \(String(describing: response))")
 
         if let error = error {
           print("Request Error: \(error.localizedDescription)")
