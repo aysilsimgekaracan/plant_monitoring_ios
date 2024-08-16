@@ -41,7 +41,8 @@ enum NotificationStyle {
 public final class NotificationService {
   public static var shared = NotificationService()
   public init() {}
-  
+
+  // swiftlint:disable function_body_length function_parameter_count
   /// Shows notification
   /// - Parameters:
   ///   - layout: The ``NotificationLayout`` option to use.
@@ -127,5 +128,5 @@ public final class NotificationService {
 
     SwiftMessages.show(config: config, view: view)
   }
-
+  // swiftlint:enable function_body_length function_parameter_count
 }

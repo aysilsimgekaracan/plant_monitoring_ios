@@ -26,6 +26,7 @@ public final class APIService {
                                    delegate: APIURLSessionDelegate.sessionDelegate,
                                    delegateQueue: nil)
 
+  // swiftlint:disable function_body_length
   /// Sends an API request
   /// - Parameter T: ``HTTPTask``
   /// - Returns: ``HTTPTask/ResponseType``
@@ -56,12 +57,24 @@ public final class APIService {
       print("---------- Sending HTTP Request ---------")
       print("URL: \(String(describing: request.url))")
       print("Method: \(String(describing: request.httpMethod))")
-      print("Body: \(String(data: request.httpBody ?? Data(), encoding: .utf8) ?? "")")
+
+      if let httpBody = request.httpBody {
+          let bodyString = String(decoding: httpBody, as: UTF8.self)
+          print("Body: \(bodyString)")
+      } else {
+          print("No HTTP body available")
+      }
+
       print("Headers: \(String(request.value(forHTTPHeaderField: "Authorization")!))")
 
       session.dataTask(with: request) { data, response, error in
         print("-------- Response HTTP Request ---------")
-        print("Response Data: \(String(data: data!, encoding: .utf8) ?? "")")
+        if let data = data {
+            let responseString = String(decoding: data, as: UTF8.self)
+            print("Response Data: \(responseString)")
+        } else {
+            print("Failed to get response data")
+        }
 
         if let error = error {
           print("Request Error: \(error.localizedDescription)")
@@ -92,5 +105,6 @@ public final class APIService {
 
     }
   }
+  // swiftlint:enable function_body_length
 
 }
