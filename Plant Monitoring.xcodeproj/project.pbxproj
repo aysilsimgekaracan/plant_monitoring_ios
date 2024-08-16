@@ -58,8 +58,12 @@
 		8B45AB4C2C6CF1D700B5C6FE /* PlantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB452C6CF1D700B5C6FE /* PlantDetailViewController.swift */; };
 		8B45AB4D2C6CF1D700B5C6FE /* PlantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB462C6CF1D700B5C6FE /* PlantDetailViewModel.swift */; };
 		8B45AB562C6CF30E00B5C6FE /* PlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB532C6CF30E00B5C6FE /* PlantCell.swift */; };
+		8B7C3E622C6FBC2100B6041C /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E612C6FBC2100B6041C /* loading-animation.json */; };
+		8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E632C6FBC2E00B6041C /* splash-animation.json */; };
 		8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B84A8E22C6DE56000592EB6 /* PlantCell.xib */; };
 		8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */; };
+		8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */; };
+		8BE09EB22C6FBB9A005C9846 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE09EB12C6FBB9A005C9846 /* Lottie */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,7 +134,10 @@
 		8B45AB462C6CF1D700B5C6FE /* PlantDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantDetailViewModel.swift; sourceTree = "<group>"; };
 		8B45AB4E2C6CF20E00B5C6FE /* Secrets.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		8B45AB532C6CF30E00B5C6FE /* PlantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCell.swift; sourceTree = "<group>"; };
+		8B7C3E612C6FBC2100B6041C /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
+		8B7C3E632C6FBC2E00B6041C /* splash-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-animation.json"; sourceTree = "<group>"; };
 		8B84A8E22C6DE56000592EB6 /* PlantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlantCell.xib; sourceTree = "<group>"; };
+		8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +147,7 @@
 			files = (
 				0F8FE1D92B99E6EB00F36B00 /* SwiftMessages in Frameworks */,
 				0F4A86112B92017F00EC6BD9 /* PromiseKit in Frameworks */,
+				8BE09EB22C6FBB9A005C9846 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +237,7 @@
 		0F028BE62B987222000C70F5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8B84A8E82C6F905C00592EB6 /* UIViewController */,
 				0F028BE72B987227000C70F5 /* UIView */,
 			);
 			path = UIKit;
@@ -429,6 +438,7 @@
 		3F7EDD122B668F3300946FF9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8BE09EB42C6FBBD8005C9846 /* Lotties */,
 				3F7EDD042B668CBF00946FF9 /* Assets.xcassets */,
 				3F7EDD3E2B66981E00946FF9 /* LaunchScreen.storyboard */,
 				0FAC58FD2C05FA4C00197153 /* PlantMonitoring.docc */,
@@ -566,6 +576,23 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		8B84A8E82C6F905C00592EB6 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		8BE09EB42C6FBBD8005C9846 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				8B7C3E632C6FBC2E00B6041C /* splash-animation.json */,
+				8B7C3E612C6FBC2100B6041C /* loading-animation.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -587,6 +614,7 @@
 			packageProductDependencies = (
 				0F4A86102B92017F00EC6BD9 /* PromiseKit */,
 				0F8FE1D82B99E6EB00F36B00 /* SwiftMessages */,
+				8BE09EB12C6FBB9A005C9846 /* Lottie */,
 			);
 			productName = "Plant Monitoring";
 			productReference = 3F7EDCF82B668CBC00946FF9 /* Plant Monitoring.app */;
@@ -620,6 +648,7 @@
 			packageReferences = (
 				0F4A860F2B92017E00EC6BD9 /* XCRemoteSwiftPackageReference "PromiseKit" */,
 				0F8FE1D72B99E6EB00F36B00 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				8BE09EB02C6FBB9A005C9846 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 3F7EDCF92B668CBC00946FF9 /* Products */;
 			projectDirPath = "";
@@ -639,7 +668,9 @@
 				3F7EDD052B668CBF00946FF9 /* Assets.xcassets in Resources */,
 				8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */,
 				8B45AB492C6CF1D700B5C6FE /* StatusBar.xib in Resources */,
+				8B7C3E622C6FBC2100B6041C /* loading-animation.json in Resources */,
 				0F028BE52B976587000C70F5 /* Plants.storyboard in Resources */,
+				8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */,
 				3F7EDD242B66905B00946FF9 /* Home.storyboard in Resources */,
 				3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */,
 				8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */,
@@ -685,6 +716,7 @@
 				3F7EDD3B2B6694C400946FF9 /* SplashCoordinator.swift in Sources */,
 				0F07FBDE2B90B48000E2ED20 /* TokenItem.swift in Sources */,
 				3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */,
+				8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */,
 				3F7EDD222B66904900946FF9 /* HomeCoordinator.swift in Sources */,
 				0F028BC02B9714F9000C70F5 /* Label.swift in Sources */,
 				0F028BDC2B974E0A000C70F5 /* PlantsItem.swift in Sources */,
@@ -952,6 +984,14 @@
 				version = 9.0.9;
 			};
 		};
+		8BE09EB02C6FBB9A005C9846 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -964,6 +1004,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F8FE1D72B99E6EB00F36B00 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
+		};
+		8BE09EB12C6FBB9A005C9846 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BE09EB02C6FBB9A005C9846 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
