@@ -16,6 +16,7 @@ public final class PlantsViewController: UIViewController {
   // MARK: - Properties
 
   var viewModel: PlantsViewModel!
+  private var refreshControl = UIRefreshControl()
   var plants: [PlantItem] = [] {
     didSet {
       tableView.reloadData()
@@ -36,32 +37,46 @@ public final class PlantsViewController: UIViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
 
-    getPlants()
     prepareTableView()
+  }
+
+  public override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    showLoadingIndicator()
+    start()
   }
 
   // MARK: - Private Helpers
 
-  private func getPlants() {
+  private func start() {
     viewModel.getPlants().done { plants in
       self.plants = plants
+      self.hideLoadingIndicator()
     }.catch { err in
       NotificationService.shared.showNotification(
         layout: .message,
         theme: .warning, title: "notification.service.error.title".localized(),
         body: err.localizedDescription,
         buttonTitle: "notification.service.button.title".localized(),
-        completion: { self.getPlants() })
+        completion: { self.start() })
     }
+    refreshControl.endRefreshing()
   }
 
   private func prepareTableView() {
+    // Set up the table view
     tableView.delegate = self
     tableView.dataSource = self
 
     tableView.register(
       UINib(nibName: "PlantCell", bundle: nil),
       forCellReuseIdentifier: "PlantCell")
+
+    // Configure the refresh control
+    refreshControl.addAction(UIAction { [weak self] _ in
+      self?.start()
+    }, for: .valueChanged)
+    tableView.refreshControl = refreshControl
   }
 }
 
