@@ -60,6 +60,7 @@
 		8B45AB562C6CF30E00B5C6FE /* PlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB532C6CF30E00B5C6FE /* PlantCell.swift */; };
 		8B7C3E622C6FBC2100B6041C /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E612C6FBC2100B6041C /* loading-animation.json */; };
 		8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E632C6FBC2E00B6041C /* splash-animation.json */; };
+		8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */; };
 		8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B84A8E22C6DE56000592EB6 /* PlantCell.xib */; };
 		8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */; };
 		8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */; };
@@ -136,6 +137,7 @@
 		8B45AB532C6CF30E00B5C6FE /* PlantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantCell.swift; sourceTree = "<group>"; };
 		8B7C3E612C6FBC2100B6041C /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
 		8B7C3E632C6FBC2E00B6041C /* splash-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-animation.json"; sourceTree = "<group>"; };
+		8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
 		8B84A8E22C6DE56000592EB6 /* PlantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlantCell.xib; sourceTree = "<group>"; };
 		8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +239,7 @@
 		0F028BE62B987222000C70F5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8B801B9F2C74D4CB00097577 /* UIImageView */,
 				8B84A8E82C6F905C00592EB6 /* UIViewController */,
 				0F028BE72B987227000C70F5 /* UIView */,
 			);
@@ -576,6 +579,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		8B801B9F2C74D4CB00097577 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */,
+			);
+			path = UIImageView;
+			sourceTree = "<group>";
+		};
 		8B84A8E82C6F905C00592EB6 /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -710,6 +721,7 @@
 			files = (
 				0F028BE92B987242000C70F5 /* UIView+Additions.swift in Sources */,
 				8B45AB4D2C6CF1D700B5C6FE /* PlantDetailViewModel.swift in Sources */,
+				8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */,
 				0FEB092B2BA09F530039396F /* APIURLSessionDelegate.swift in Sources */,
 				0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */,
 				0F6AA5362BE106A000DE32EA /* Date+Additions.swift in Sources */,

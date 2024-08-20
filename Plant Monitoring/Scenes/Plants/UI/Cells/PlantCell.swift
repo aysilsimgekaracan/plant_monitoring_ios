@@ -16,6 +16,12 @@ public final class PlantCell: UITableViewCell {
   @IBOutlet weak var plantDescription: UILabel!
 
   public func configure(with plant: PlantItem) {
+    if let imageURL = URL(string: plant.imageUrl) {
+      plantImage.setImage(with: imageURL)
+    } else {
+      plantImage.image = UIImage(named: "app-icon")
+    }
+
     nameLabel.text = plant.name
     locationLabel.text = plant.location
     typeLabel.text = plant.type
