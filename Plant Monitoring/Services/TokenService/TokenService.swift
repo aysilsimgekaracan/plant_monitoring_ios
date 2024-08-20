@@ -18,6 +18,7 @@ public final class TokenService {
   let defaults = UserDefaults.standard
   let endpoint = "/GetAuth"
 
+  // swiftlint:disable function_body_length
   func start() -> Promise<TokenItem> {
     self.defaults.set(value: "", for: .authenticationToken)
 
@@ -48,7 +49,12 @@ public final class TokenService {
       print("---------- Sending HTTP Request ---------")
       print("URL: \(String(describing: request.url))")
       print("Method: \(String(describing: request.httpMethod))")
-      print("Body: \(String(data: request.httpBody!, encoding: .utf8) ?? "")")
+      if let httpBody = request.httpBody {
+          let bodyString = String(decoding: httpBody, as: UTF8.self)
+          print("Body: \(bodyString)")
+      } else {
+          print("No HTTP body available")
+      }
 
       URLSession.shared.dataTask(with: request) { data, response, error in
         print("-------- Response HTTP Request ---------")
@@ -84,5 +90,5 @@ public final class TokenService {
 
     }
   }
-
+  // swiftlint:enable function_body_length
 }

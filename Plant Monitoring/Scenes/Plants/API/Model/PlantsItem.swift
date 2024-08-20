@@ -17,4 +17,5 @@ public struct PlantItem: Codable, Identifiable {
   let type: String
   let location: String
   let description: String
+  let imageUrl: String
 }

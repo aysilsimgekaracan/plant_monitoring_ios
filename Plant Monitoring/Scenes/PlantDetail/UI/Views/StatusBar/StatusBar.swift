@@ -47,7 +47,6 @@ public final class StatusBar: UIView {
     contentView.autoresizingMask = [.flexibleWidth]
   }
 
-  // swiftlint:disable function_parameter_count
   public func configure(
     humidityLevel: String,
     temperatureLevel: String,
@@ -58,5 +57,4 @@ public final class StatusBar: UIView {
       lastUpdateLabel.text = "last.update".localized()
 
   }
-  // swiftlint:enable function_parameter_count
 }
