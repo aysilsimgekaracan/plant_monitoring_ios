@@ -18,46 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgJ-Lv-NH3">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVt-yG-CzG">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1400"/>
-                                        <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pwq-UC-jC9">
-                                                <rect key="frame" x="0.0" y="40" width="393" height="600"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="600" id="SrM-TW-2s3"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="a6b-nb-osn">
-                                                    <size key="itemSize" width="128" height="128"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells/>
-                                            </collectionView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="pwq-UC-jC9" secondAttribute="trailing" id="6yC-3b-Z9V"/>
-                                            <constraint firstAttribute="height" constant="1400" id="U3Z-NP-C0s"/>
-                                            <constraint firstItem="pwq-UC-jC9" firstAttribute="leading" secondItem="MVt-yG-CzG" secondAttribute="leading" id="tn8-33-QEq"/>
-                                            <constraint firstItem="pwq-UC-jC9" firstAttribute="top" secondItem="MVt-yG-CzG" secondAttribute="top" constant="40" id="uIT-HE-zmh"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="MVt-yG-CzG" firstAttribute="leading" secondItem="lAm-MR-0P2" secondAttribute="leading" id="Hog-ou-scm"/>
-                                    <constraint firstItem="MVt-yG-CzG" firstAttribute="trailing" secondItem="lAm-MR-0P2" secondAttribute="trailing" id="Jfp-Te-h9u"/>
-                                    <constraint firstItem="MVt-yG-CzG" firstAttribute="bottom" secondItem="lAm-MR-0P2" secondAttribute="bottom" id="TQb-1k-meA"/>
-                                    <constraint firstItem="MVt-yG-CzG" firstAttribute="top" secondItem="lAm-MR-0P2" secondAttribute="top" id="YsR-mF-8l9"/>
-                                    <constraint firstItem="MVt-yG-CzG" firstAttribute="width" secondItem="GEY-RK-q9Y" secondAttribute="width" id="jjT-ad-7NX"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="lAm-MR-0P2"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="GEY-RK-q9Y"/>
-                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pwq-UC-jC9">
+                                <rect key="frame" x="0.0" y="99" width="393" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="a6b-nb-osn">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pPz-1D-8ir">
                                 <rect key="frame" x="20" y="748" width="353" height="70"/>
                                 <subviews>
@@ -68,25 +39,35 @@
                                         <buttonConfiguration key="configuration" style="plain" title="SKIP"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="onboarding.skip"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="textCase">
+                                                <integer key="value" value="-3"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="skipButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hQ5-QY-fem"/>
+                                        </connections>
                                     </button>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iUm-zj-kz6">
-                                        <rect key="frame" x="117" y="0.0" width="115.66666666666669" height="70"/>
+                                        <rect key="frame" x="114.33333333333334" y="0.0" width="115.66666666666666" height="70"/>
                                         <color key="pageIndicatorTintColor" name="plant-crystal-green"/>
                                         <color key="currentPageIndicatorTintColor" name="plant-deep-moss-green"/>
                                     </pageControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyl-xj-Tx0" customClass="Button" customModule="Plant_Monitoring" customModuleProvider="target">
-                                        <rect key="frame" x="289.66666666666669" y="0.0" width="63.333333333333314" height="70"/>
+                                        <rect key="frame" x="284.66666666666669" y="0.0" width="68.333333333333314" height="70"/>
                                         <color key="tintColor" name="plant-middle-green"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Next">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="onboarding.next"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="b5j-T6-YWi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="9Bv-n3-itP"/>
                                 </constraints>
@@ -95,18 +76,20 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qgJ-Lv-NH3" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="-59" id="B3b-wa-2hP"/>
-                            <constraint firstAttribute="trailing" secondItem="qgJ-Lv-NH3" secondAttribute="trailing" id="Dav-Sf-Cjy"/>
-                            <constraint firstAttribute="bottom" secondItem="qgJ-Lv-NH3" secondAttribute="bottom" id="E6w-Ul-Cxc"/>
+                            <constraint firstItem="pwq-UC-jC9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="DE7-dI-Bpq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pPz-1D-8ir" secondAttribute="trailing" constant="20" id="FEF-x9-teU"/>
                             <constraint firstItem="pPz-1D-8ir" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="QJ9-uW-50V"/>
+                            <constraint firstItem="pwq-UC-jC9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Uf6-Q3-jas"/>
+                            <constraint firstItem="pwq-UC-jC9" firstAttribute="bottom" secondItem="pPz-1D-8ir" secondAttribute="top" constant="-20" id="WeH-BM-VMj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pPz-1D-8ir" secondAttribute="bottom" id="Zul-0x-QJm"/>
-                            <constraint firstItem="qgJ-Lv-NH3" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="jXc-RL-wur"/>
+                            <constraint firstItem="pwq-UC-jC9" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="gJb-FM-Pc9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="pwq-UC-jC9" id="6B0-3Z-vkf"/>
+                        <outlet property="nextButton" destination="gyl-xj-Tx0" id="3Zw-ZW-e89"/>
                         <outlet property="pager" destination="iUm-zj-kz6" id="s2V-HO-0VM"/>
+                        <outlet property="skipButton" destination="rSW-OP-HIb" id="h0F-Im-Ace"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

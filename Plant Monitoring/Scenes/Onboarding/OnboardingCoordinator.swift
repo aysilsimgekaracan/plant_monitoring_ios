@@ -29,7 +29,7 @@ public final class OnboardingCoordinator: Coordinator {
     navigationController.pushViewController(viewController, animated: true)
   }
 
-  func navigateBack() {
-    navigationController.popViewController(animated: true)
+  func startTabBar() {
+    ApplicationCoordinator.shared.showTabBar()
   }
 }

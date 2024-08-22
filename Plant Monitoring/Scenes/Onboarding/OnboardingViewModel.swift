@@ -26,7 +26,7 @@ public final class OnboardingViewModel {
     }
   }
 
-  func loadJson(filename fileName: String) -> Promise<OnboardingItems> {
+  private func loadJson(filename fileName: String) -> Promise<OnboardingItems> {
     return Promise { seal in
       if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
           do {
@@ -39,5 +39,11 @@ public final class OnboardingViewModel {
         }
       }
     }
+  }
+  
+// MARK: Navigation
+
+  public func startTabBar() {
+    coordinator.startTabBar()
   }
 }

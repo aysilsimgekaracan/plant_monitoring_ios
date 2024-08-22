@@ -12,15 +12,22 @@ public final class OnboardingViewController: UIViewController {
 
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var pager: UIPageControl!
-  
+  @IBOutlet weak var skipButton: Button!
+  @IBOutlet weak var nextButton: Button!
+
   // MARK: Properties
 
   var viewModel: OnboardingViewModel!
+  var currentPage: Int = 0 {
+    didSet {
+      pager.currentPage = currentPage
+      prepareStep(for: currentPage)
+    }
+  }
   var display: OnboardingDisplay! = .empty {
     didSet {
-      prepareStep(for: .empty)
       collectionView.reloadData()
-      pager.numberOfPages = display.onboardings.count
+      currentPage = .zero
     }
   }
 
@@ -54,10 +61,36 @@ public final class OnboardingViewController: UIViewController {
                                 animated: true)
   }
 
+  @IBAction func nextButtonPressed(_ sender: Any) {
+    if currentPage == display.onboardings.count - 1 {
+      viewModel.startTabBar()
+    } else {
+      let nextPage = currentPage + 1
+      collectionView.scrollToItem(at: IndexPath(item: nextPage, section: 0), at: .centeredHorizontally, animated: true)
+      currentPage = nextPage
+    }
+  }
+
+  @IBAction func skipButtonPressed(_ sender: Any) {
+    viewModel.startTabBar()
+  }
+
   // MARK: Private Helpers
 
   private func prepareStep(for index: Int) {
-    let onboardingItem = display.onboardings[index]
+    if index == display.onboardings.count - 1 {
+      UIView.animate(withDuration: 0.3) {
+        self.nextButton.setTitle("onboarding.get.started".localized().uppercased(), for: .normal)
+        self.pager.isHidden = true
+        self.skipButton.isHidden = true
+      }
+    } else {
+      UIView.animate(withDuration: 0.3) {
+        self.nextButton.setTitle("onboarding.next".localized().uppercased(), for: .normal)
+        self.skipButton.isHidden = false
+        self.pager.isHidden = false
+      }
+    }
   }
 
   private func prepareView() {
@@ -98,5 +131,9 @@ extension OnboardingViewController: UICollectionViewDelegate,
                              sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
   }
-  
+
+  public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    let currentCell = Int(scrollView.contentOffset.x / self.collectionView.frame.width)
+    self.currentPage = currentCell
+  }
 }
