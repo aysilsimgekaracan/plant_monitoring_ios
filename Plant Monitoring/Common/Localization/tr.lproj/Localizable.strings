@@ -21,3 +21,14 @@
 
 // MARK: - PlantDetail
 "plant.detail.last.update" = "Son güncelleme: ";
+
+// MARK: - Onboarding
+"onboarding.1.title" = "Hoş Geldiniz!";
+"onboarding.1.subtitle" = "Bitkilerinizi akıllı cihazlarla kolayca izleyin ve bakımını yapın.";
+"onboarding.2.title" = "Kurulum ve Bağlantı";
+"onboarding.2.subtitle" = "Cihazınızı ekleyin, bitki profilleri oluşturun ve bitkilerinizi izlemeye başlamak için bağlantı kurun.";
+"onboarding.3.title" = "İzleyin ve Kontrol Edin";
+"onboarding.3.subtitle" = "Bitkinizin sağlığını gerçek zamanlı olarak takip edin ve otomatik sulama programları ayarlayın.";
+"onboarding.skip" = "Geç";
+"onboarding.next" = "Devam Et";
+"onboarding.get.started" = "Başla";

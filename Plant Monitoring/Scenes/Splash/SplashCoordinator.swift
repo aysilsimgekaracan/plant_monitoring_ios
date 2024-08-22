@@ -25,4 +25,8 @@ public final class SplashCoordinator: Coordinator {
   func startTabBar() {
     ApplicationCoordinator.shared.showTabBar()
   }
+
+  func showOnboarding() {
+    OnboardingCoordinator(navigationController: navigationController).start()
+  }
 }

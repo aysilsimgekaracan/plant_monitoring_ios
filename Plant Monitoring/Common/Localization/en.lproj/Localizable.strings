@@ -21,3 +21,14 @@
 
 // MARK: - PlantDetail
 "plant.detail.last.update" = "Last update at: ";
+
+// MARK: - Onboarding
+"onboarding.1.title" = "Welcome!";
+"onboarding.1.subtitle" = "Easily monitor and care for your plants with smart devices.";
+"onboarding.2.title" = "Set Up and Connect";
+"onboarding.2.subtitle" = "Add your device, create plant profiles, and link them to start monitoring your plants.";
+"onboarding.3.title" = "Monitor and Control";
+"onboarding.3.subtitle" = "Track your plant’s health in real time and set automated watering schedules.";
+"onboarding.skip" = "Skip";
+"onboarding.next" = "Next";
+"onboarding.get.started" = "Get Started";

@@ -30,4 +30,10 @@ extension UserDefaults {
   func bool(for key: UserDefaultsKeys) -> Bool {
       return bool(forKey: key.rawValue)
   }
+
+  static func registerDefaultsIfNeeded() {
+    if UserDefaults.standard.object(forKey: UserDefaultsKeys.isFirstLaunch.rawValue) == nil {
+        UserDefaults.standard.set(true, forKey: UserDefaultsKeys.isFirstLaunch.rawValue)
+    }
+  }
 }
