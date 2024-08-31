@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Lottie
 
 public final class SplashViewController: UIViewController {
 
   // MARK: - IBOutlets
 
-  @IBOutlet weak var animationView: UIView!
+  @IBOutlet weak var animationView: LottieAnimationView!
 
   // MARK: - Properties
 
@@ -48,14 +49,10 @@ public final class SplashViewController: UIViewController {
   }
 
   private func animateBackgroundAndProceed() {
-    UIView.animate(withDuration: animationDuration) {
-      self.animationView.layer.cornerRadius = 120
-      self.animationView.backgroundColor = .green
-      self.animationView.layer.opacity = 0.4
-      self.animationView.layer.masksToBounds = true
-
-      self.animationView.layoutIfNeeded()
-    }
+    animationView.contentMode = .scaleAspectFit
+    animationView.loopMode = .loop
+    animationView.animationSpeed = 2
+    animationView.play()
   }
 
   private func proceed() {
