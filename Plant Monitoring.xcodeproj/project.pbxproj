@@ -61,6 +61,17 @@
 		8B7C3E622C6FBC2100B6041C /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E612C6FBC2100B6041C /* loading-animation.json */; };
 		8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E632C6FBC2E00B6041C /* splash-animation.json */; };
 		8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */; };
+		8B801BA42C77217A00097577 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BA32C77217A00097577 /* OnboardingViewController.swift */; };
+		8B801BA62C77218200097577 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BA52C77218200097577 /* OnboardingViewModel.swift */; };
+		8B801BA82C77218E00097577 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BA72C77218E00097577 /* OnboardingCoordinator.swift */; };
+		8B801BAA2C77219900097577 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B801BA92C77219900097577 /* Onboarding.storyboard */; };
+		8B801BAF2C7729DA00097577 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BAE2C7729DA00097577 /* Button.swift */; };
+		8B801BB42C77497D00097577 /* GetOnboardingItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B801BB32C77497D00097577 /* GetOnboardingItems.json */; };
+		8B801BB62C774A1300097577 /* OnboardingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BB52C774A1300097577 /* OnboardingItem.swift */; };
+		8B801BB82C774AF800097577 /* OnboardingDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BB72C774AF800097577 /* OnboardingDisplay.swift */; };
+		8B801BBB2C77BFE800097577 /* Int+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BBA2C77BFE800097577 /* Int+Additions.swift */; };
+		8B801BBF2C77C11900097577 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BBE2C77C11900097577 /* OnboardingCell.swift */; };
+		8B801BC12C77C12400097577 /* OnboardingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B801BC02C77C12400097577 /* OnboardingCell.xib */; };
 		8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B84A8E22C6DE56000592EB6 /* PlantCell.xib */; };
 		8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */; };
 		8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */; };
@@ -138,6 +149,17 @@
 		8B7C3E612C6FBC2100B6041C /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
 		8B7C3E632C6FBC2E00B6041C /* splash-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-animation.json"; sourceTree = "<group>"; };
 		8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
+		8B801BA32C77217A00097577 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		8B801BA52C77218200097577 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		8B801BA72C77218E00097577 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		8B801BA92C77219900097577 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		8B801BAE2C7729DA00097577 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		8B801BB32C77497D00097577 /* GetOnboardingItems.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GetOnboardingItems.json; sourceTree = "<group>"; };
+		8B801BB52C774A1300097577 /* OnboardingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItem.swift; sourceTree = "<group>"; };
+		8B801BB72C774AF800097577 /* OnboardingDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDisplay.swift; sourceTree = "<group>"; };
+		8B801BBA2C77BFE800097577 /* Int+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Additions.swift"; sourceTree = "<group>"; };
+		8B801BBE2C77C11900097577 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		8B801BC02C77C12400097577 /* OnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
 		8B84A8E22C6DE56000592EB6 /* PlantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlantCell.xib; sourceTree = "<group>"; };
 		8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +181,7 @@
 		0F028BBD2B9714DD000C70F5 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8B801BAD2C7729D100097577 /* Button */,
 				0F028BBE2B9714EF000C70F5 /* Label */,
 			);
 			path = UI;
@@ -452,13 +475,14 @@
 		3F7EDD132B668F3C00946FF9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3F7EDD1B2B66901700946FF9 /* Home */,
+				8B801BA22C77215200097577 /* Onboarding */,
 				8B45AB472C6CF1D700B5C6FE /* PlantDetail */,
 				0F028BDD2B976550000C70F5 /* Plants */,
 				3F7EDD352B66949B00946FF9 /* Splash */,
-				3F7EDD1B2B66901700946FF9 /* Home */,
+				3F7EDD192B66901400946FF9 /* TabBarCoordinator.swift */,
 				3F7EDD152B668FA400946FF9 /* ApplicationCoordinator.swift */,
 				3F7EDD172B668FAD00946FF9 /* Coordinator.swift */,
-				3F7EDD192B66901400946FF9 /* TabBarCoordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -496,6 +520,7 @@
 		3F7EDD2E2B66926300946FF9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8B801BB92C77BFD100097577 /* Int */,
 				0F6AA5342BE1069300DE32EA /* Date */,
 				0F4A86152B92081900EC6BD9 /* UserDefaults */,
 				0F07FBCA2B84BF6900E2ED20 /* Bundle */,
@@ -554,10 +579,10 @@
 			isa = PBXGroup;
 			children = (
 				8B45AB422C6CF1D700B5C6FE /* UI */,
-				8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */,
-				8B45AB442C6CF1D700B5C6FE /* PlantDetailCoordinator.swift */,
 				8B45AB452C6CF1D700B5C6FE /* PlantDetailViewController.swift */,
 				8B45AB462C6CF1D700B5C6FE /* PlantDetailViewModel.swift */,
+				8B45AB442C6CF1D700B5C6FE /* PlantDetailCoordinator.swift */,
+				8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */,
 			);
 			path = PlantDetail;
 			sourceTree = "<group>";
@@ -585,6 +610,78 @@
 				8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		8B801BA22C77215200097577 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BB02C77492700097577 /* API */,
+				8B801BBC2C77C10100097577 /* UI */,
+				8B801BA32C77217A00097577 /* OnboardingViewController.swift */,
+				8B801BA52C77218200097577 /* OnboardingViewModel.swift */,
+				8B801BA72C77218E00097577 /* OnboardingCoordinator.swift */,
+				8B801BA92C77219900097577 /* Onboarding.storyboard */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8B801BAD2C7729D100097577 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BAE2C7729DA00097577 /* Button.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		8B801BB02C77492700097577 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BB22C77495B00097577 /* Response */,
+				8B801BB12C77492D00097577 /* Model */,
+				8B801BB72C774AF800097577 /* OnboardingDisplay.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8B801BB12C77492D00097577 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BB52C774A1300097577 /* OnboardingItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B801BB22C77495B00097577 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BB32C77497D00097577 /* GetOnboardingItems.json */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		8B801BB92C77BFD100097577 /* Int */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BBA2C77BFE800097577 /* Int+Additions.swift */,
+			);
+			path = Int;
+			sourceTree = "<group>";
+		};
+		8B801BBC2C77C10100097577 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BBD2C77C10A00097577 /* Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8B801BBD2C77C10A00097577 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8B801BBE2C77C11900097577 /* OnboardingCell.swift */,
+				8B801BC02C77C12400097577 /* OnboardingCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		8B84A8E82C6F905C00592EB6 /* UIViewController */ = {
@@ -678,8 +775,11 @@
 				3F7EDD2A2B66922700946FF9 /* Localizable.strings in Resources */,
 				3F7EDD052B668CBF00946FF9 /* Assets.xcassets in Resources */,
 				8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */,
+				8B801BC12C77C12400097577 /* OnboardingCell.xib in Resources */,
+				8B801BAA2C77219900097577 /* Onboarding.storyboard in Resources */,
 				8B45AB492C6CF1D700B5C6FE /* StatusBar.xib in Resources */,
 				8B7C3E622C6FBC2100B6041C /* loading-animation.json in Resources */,
+				8B801BB42C77497D00097577 /* GetOnboardingItems.json in Resources */,
 				0F028BE52B976587000C70F5 /* Plants.storyboard in Resources */,
 				8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */,
 				3F7EDD242B66905B00946FF9 /* Home.storyboard in Resources */,
@@ -730,10 +830,15 @@
 				3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */,
 				8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */,
 				3F7EDD222B66904900946FF9 /* HomeCoordinator.swift in Sources */,
+				8B801BA82C77218E00097577 /* OnboardingCoordinator.swift in Sources */,
 				0F028BC02B9714F9000C70F5 /* Label.swift in Sources */,
 				0F028BDC2B974E0A000C70F5 /* PlantsItem.swift in Sources */,
 				3F7EDD392B6694BA00946FF9 /* SplashViewModel.swift in Sources */,
+				8B801BAF2C7729DA00097577 /* Button.swift in Sources */,
 				3F7EDD1A2B66901400946FF9 /* TabBarCoordinator.swift in Sources */,
+				8B801BBF2C77C11900097577 /* OnboardingCell.swift in Sources */,
+				8B801BBB2C77BFE800097577 /* Int+Additions.swift in Sources */,
+				8B801BB62C774A1300097577 /* OnboardingItem.swift in Sources */,
 				0FAC58FE2C05FA4C00197153 /* PlantMonitoring.docc in Sources */,
 				0F028BE12B976576000C70F5 /* PlantsViewModel.swift in Sources */,
 				0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */,
@@ -744,12 +849,14 @@
 				8B45AB562C6CF30E00B5C6FE /* PlantCell.swift in Sources */,
 				3F7EDD312B66927B00946FF9 /* String+Additions.swift in Sources */,
 				0F028BC92B973630000C70F5 /* Colors.swift in Sources */,
+				8B801BB82C774AF800097577 /* OnboardingDisplay.swift in Sources */,
 				3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */,
 				0F028BE32B97657F000C70F5 /* PlantsCoordinator.swift in Sources */,
 				8B45AB4B2C6CF1D700B5C6FE /* PlantDetailCoordinator.swift in Sources */,
 				8B45AB482C6CF1D700B5C6FE /* StatusBar.swift in Sources */,
 				8B45AB4C2C6CF1D700B5C6FE /* PlantDetailViewController.swift in Sources */,
 				0F0FB7C62BA06192006D2BBF /* GetPlantsTask.swift in Sources */,
+				8B801BA42C77217A00097577 /* OnboardingViewController.swift in Sources */,
 				3F7EDD1E2B66903300946FF9 /* HomeViewController.swift in Sources */,
 				0F028BD52B974DA4000C70F5 /* HomeDisplay.swift in Sources */,
 				0F028BDF2B97656A000C70F5 /* PlantsViewController.swift in Sources */,
@@ -758,6 +865,7 @@
 				0FC8DCBC2B99A3B20070B4F0 /* NotificationService.swift in Sources */,
 				0F028BCD2B9739DB000C70F5 /* EmptyPlantTrackCard.swift in Sources */,
 				0F0FB7C32BA05DD6006D2BBF /* APIService.swift in Sources */,
+				8B801BA62C77218200097577 /* OnboardingViewModel.swift in Sources */,
 				0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */,
 				3F7EDD372B6694B000946FF9 /* SplashViewController.swift in Sources */,
 				0F4A860E2B91FC1D00EC6BD9 /* TokenService.swift in Sources */,

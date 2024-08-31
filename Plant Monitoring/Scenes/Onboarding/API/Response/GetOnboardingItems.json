@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "title": "onboarding.1.title",
+      "subtitle": "onboarding.1.subtitle",
+      "imageName": "onboarding-1"
+    },
+    {
+      "title": "onboarding.2.title",
+      "subtitle": "onboarding.2.subtitle",
+      "imageName": "onboarding-2"
+    },
+    {
+      "title": "onboarding.3.title",
+      "subtitle": "onboarding.3.subtitle",
+      "imageName": "onboarding-3"
+    }
+  ]
+}

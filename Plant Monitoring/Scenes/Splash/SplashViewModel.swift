@@ -28,6 +28,12 @@ class SplashViewModel {
   // MARK: - Navigation
 
   func proceed() {
-    coordinator.startTabBar()
+    let isFirstLaunch = UserDefaults.standard.bool(for: .isFirstLaunch)
+
+    if isFirstLaunch {
+      coordinator.showOnboarding()
+    } else {
+      coordinator.startTabBar()
+    }
   }
 }

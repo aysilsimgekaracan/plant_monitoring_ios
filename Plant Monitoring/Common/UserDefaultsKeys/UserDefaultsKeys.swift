@@ -9,4 +9,5 @@ import Foundation
 
 public enum UserDefaultsKeys: String {
   case authenticationToken
+  case isFirstLaunch
 }

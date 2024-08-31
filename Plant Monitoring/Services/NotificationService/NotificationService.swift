@@ -42,7 +42,7 @@ public final class NotificationService {
   public static var shared = NotificationService()
   public init() {}
 
-  // swiftlint:disable function_body_length function_parameter_count
+  // swiftlint:disable function_body_length
   /// Shows notification
   /// - Parameters:
   ///   - layout: The ``NotificationLayout`` option to use.
@@ -51,11 +51,11 @@ public final class NotificationService {
   ///   - body:
   ///   - buttonTitle:
   ///   - completion: Give action when the button is pressed (if needed)
-  func showNotification(layout: NotificationLayout,
-                        theme: NotificationTheme,
-                        title: String,
+  func showNotification(layout: NotificationLayout = .message,
+                        theme: NotificationTheme = .warning,
+                        title: String = "notification.service.error.title".localized(),
                         body: String,
-                        buttonTitle: String,
+                        buttonTitle: String = "notification.service.button.title".localized(),
                         completion: @escaping () -> Void) {
     let view: MessageView
     let iconStyle: IconStyle = .default
@@ -128,5 +128,5 @@ public final class NotificationService {
 
     SwiftMessages.show(config: config, view: view)
   }
-  // swiftlint:enable function_body_length function_parameter_count
+  // swiftlint:enable function_body_length
 }
