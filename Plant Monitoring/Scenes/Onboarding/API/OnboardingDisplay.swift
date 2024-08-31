@@ -9,6 +9,6 @@ import Foundation
 
 public struct OnboardingDisplay {
   let onboardings: [OnboardingItem]
-  
+
   static let empty: OnboardingDisplay = OnboardingDisplay(onboardings: [])
 }

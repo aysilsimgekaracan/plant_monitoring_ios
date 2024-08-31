@@ -40,10 +40,11 @@ public final class OnboardingViewModel {
       }
     }
   }
-  
+
 // MARK: Navigation
 
   public func startTabBar() {
+    UserDefaults.standard.set(value: false, for: .isFirstLaunch)
     coordinator.startTabBar()
   }
 }
