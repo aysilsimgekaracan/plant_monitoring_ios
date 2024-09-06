@@ -25,8 +25,14 @@ public final class PlantsViewModel {
     }
   }
 
+  // MARK: Navigation
+
   public func showPlantDetail(for plant: PlantItem) {
     coordinator.showPlantDetail(with: plant)
+  }
+
+  public func showAddPlant() {
+    coordinator.showAddPlant()
   }
 
 }

@@ -34,4 +34,9 @@ public final class PlantsCoordinator: Coordinator {
     coordinator.start()
   }
 
+  public func showAddPlant() {
+    let coordinator = AddPlantCoordinator(navigationController: navigationController)
+    coordinator.start()
+  }
+
 }

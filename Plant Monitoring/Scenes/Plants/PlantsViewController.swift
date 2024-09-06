@@ -46,6 +46,12 @@ public final class PlantsViewController: UIViewController {
     start()
   }
 
+  // MARK: IBActions
+
+  @IBAction func addPlantButtonPressed(_ sender: Any) {
+    viewModel.showAddPlant()
+  }
+
   // MARK: - Private Helpers
 
   private func start() {

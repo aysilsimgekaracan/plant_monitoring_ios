@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  Plant Monitoring
+
+  Created by Ayşıl Simge Karacan on 5.09.2024.
+  
+*/
+
+NSCameraUsageDescription = "Bu uygulama fotoğraf çekmek için kameraya erişim gerektirir.";

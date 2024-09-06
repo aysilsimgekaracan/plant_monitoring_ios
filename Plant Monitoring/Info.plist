@@ -4,12 +4,12 @@
 <dict>
 	<key>Config</key>
 	<dict>
+		<key>api_host</key>
+		<string>$(API_HOST)</string>
 		<key>api_password</key>
 		<string>$(API_PASSWORD)</string>
 		<key>api_user</key>
 		<string>$(API_USER)</string>
-		<key>api_host</key>
-		<string>$(API_HOST)</string>
 	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
