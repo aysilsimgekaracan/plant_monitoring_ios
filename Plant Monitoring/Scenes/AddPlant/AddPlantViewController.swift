@@ -10,18 +10,27 @@ import PhotosUI
 
 private enum CellTypes: Int, CaseIterable {
   case addPlantCell = 0
-  case selectDeviceCell = 1
+  case availableDevicesCell = 1
 }
 
 public final class AddPlantViewController: UIViewController {
   // MARK: IBOutlets
 
   @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var pager: UIPageControl!
+  @IBOutlet weak var backButton: UIButton!
+  @IBOutlet weak var completionButton: UIButton!
 
   // MARK: Properties
 
   var viewModel: AddPlantViewModel!
   var display: AddPlantDisplay = .empty
+  var currentPage: Int = 0 {
+    didSet {
+      pager.currentPage = currentPage
+      prepareStep(for: currentPage)
+    }
+  }
 
   // MARK: View's Lifecycle
 
@@ -43,6 +52,7 @@ public final class AddPlantViewController: UIViewController {
     super.viewDidLoad()
     self.hideKeyboardWhenTappedAround()
     prepareCollectionView()
+    prepareView()
   }
 
   public override func viewWillDisappear(_ animated: Bool) {
@@ -50,14 +60,46 @@ public final class AddPlantViewController: UIViewController {
     self.removeKeyboardObserver()
   }
 
+  // MARK: IBActions
+
+  @IBAction func navigateBackButtonPressed(_ sender: Any) {
+    viewModel.navigateBack()
+  }
+
+  @IBAction func completionButtonPressed(_ sender: Any) {
+    if currentPage == CellTypes.allCases.count - 1 {
+      // TODO: continue next step
+    } else {
+      let nextPage = currentPage + 1
+      collectionView.scrollToItem(at: IndexPath(item: nextPage, section: 0), at: .centeredHorizontally, animated: true)
+      currentPage = nextPage
+    }
+  }
+
+  @IBAction func backButtonPressed(_ sender: Any) {
+    if currentPage != .zero {
+      let nextPage = currentPage - 1
+      collectionView.scrollToItem(at: IndexPath(item: nextPage, section: 0), at: .centeredHorizontally, animated: true)
+      currentPage = nextPage
+    }
+
+  }
+
   // MARK: Private Helpers
 
   private func prepareCollectionView() {
-    let nib = UINib(nibName: "AddPlantCell", bundle: nil)
-    collectionView.register(nib, forCellWithReuseIdentifier: "AddPlantCell")
+    let addPlantNib = UINib(nibName: "AddPlantCell", bundle: nil)
+    collectionView.register(addPlantNib, forCellWithReuseIdentifier: "AddPlantCell")
+
+    let availableDevicesNib = UINib(nibName: "AvailableDevicesCell", bundle: nil)
+    collectionView.register(availableDevicesNib, forCellWithReuseIdentifier: "AvailableDevicesCell")
 
     collectionView.delegate = self
     collectionView.dataSource = self
+  }
+
+  private func prepareView() {
+    backButton.isHidden = true
   }
 
   private func showCamera() {
@@ -76,6 +118,11 @@ public final class AddPlantViewController: UIViewController {
     picker.delegate = self
     present(picker, animated: true, completion: nil)
   }
+
+  private func prepareStep(for index: Int) {
+    backButton.isHidden = index == 0
+  }
+
 }
 
 // MARK: UICollectionViewDelegate, UICollectionViewDataSource
@@ -89,13 +136,26 @@ extension AddPlantViewController: UICollectionViewDelegate,
 
   public func collectionView(_ collectionView: UICollectionView,
                              cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddPlantCell",
-                                                        for: indexPath) as? AddPlantCell else {
-      fatalError("The dequeued cell is not an instance of AddPlantCell")
+
+    switch indexPath.row {
+    case CellTypes.addPlantCell.rawValue:
+      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AddPlantCell",
+                                                          for: indexPath) as? AddPlantCell else {
+        fatalError("The dequeued cell is not an instance of AddPlantCell")
+      }
+      cell.delegate = self
+      cell.configure()
+      return cell
+    case CellTypes.availableDevicesCell.rawValue:
+      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AvailableDevicesCell",
+                                                          for: indexPath) as? AvailableDevicesCell else {
+        fatalError("The dequeued cell is not an instance of AvailableDevicesCell")
+      }
+      return cell
+
+    default:
+      return UICollectionViewCell()
     }
-    cell.delegate = self
-    cell.configure()
-    return cell
   }
 
   public func collectionView(_ collectionView: UICollectionView,

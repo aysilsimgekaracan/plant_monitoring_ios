@@ -26,19 +26,24 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgc-oh-ExY">
                                                 <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="5hU-cl-4PQ"/>
+                                                    <constraint firstAttribute="height" constant="64" id="lbK-6G-Koh"/>
+                                                </constraints>
                                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                                <connections>
+                                                    <action selector="navigateBackButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Y5w-9H-cOa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="sgc-oh-ExY" firstAttribute="centerY" secondItem="08z-sN-Idh" secondAttribute="centerY" id="05c-xf-ZHo"/>
-                                            <constraint firstAttribute="height" constant="64" id="3Tq-oa-4Mf"/>
-                                            <constraint firstItem="sgc-oh-ExY" firstAttribute="height" secondItem="08z-sN-Idh" secondAttribute="height" id="EPX-uD-fg4"/>
-                                            <constraint firstItem="sgc-oh-ExY" firstAttribute="width" secondItem="08z-sN-Idh" secondAttribute="width" id="YRu-7u-qTX"/>
-                                            <constraint firstAttribute="width" constant="64" id="w0O-tb-NOJ"/>
-                                            <constraint firstItem="sgc-oh-ExY" firstAttribute="centerX" secondItem="08z-sN-Idh" secondAttribute="centerX" id="xMU-2j-tcF"/>
+                                            <constraint firstItem="sgc-oh-ExY" firstAttribute="centerY" secondItem="08z-sN-Idh" secondAttribute="centerY" id="Bx9-QX-cKb"/>
+                                            <constraint firstItem="sgc-oh-ExY" firstAttribute="centerX" secondItem="08z-sN-Idh" secondAttribute="centerX" id="Nu4-pr-xBX"/>
+                                            <constraint firstAttribute="width" constant="64" id="ufI-i2-TFB"/>
+                                            <constraint firstAttribute="height" constant="64" id="uqg-WV-cmh"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a New Plant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-tl-5qL">
@@ -48,9 +53,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="k8k-xT-h55"/>
+                                </constraints>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R13-d9-FEv">
-                                <rect key="frame" x="0.0" y="123" width="393" height="605"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="R13-d9-FEv">
+                                <rect key="frame" x="0.0" y="123" width="393" height="595"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0qS-mY-ZYL">
                                     <size key="itemSize" width="128" height="128"/>
@@ -61,42 +69,69 @@
                                 <cells/>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Jhk-HR-9Sz">
-                                <rect key="frame" x="0.0" y="728" width="393" height="40"/>
+                                <rect key="frame" x="0.0" y="718" width="393" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="6bP-dO-6qU"/>
+                                    <constraint firstAttribute="height" constant="40" id="nos-qu-qBi"/>
                                 </constraints>
                                 <color key="pageIndicatorTintColor" name="plant-crystal-green"/>
                                 <color key="currentPageIndicatorTintColor" name="plant-deep-moss-green"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-7I-y20">
-                                <rect key="frame" x="0.0" y="768" width="393" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsp-bM-DoE">
+                                <rect key="frame" x="10" y="758" width="373" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-AM-CgV">
+                                        <rect key="frame" x="0.0" y="0.0" width="186.66666666666666" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Back">
+                                            <color key="baseForegroundColor" name="plant-deep-moss-green"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5Hc-Gc-PVQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-7I-y20">
+                                        <rect key="frame" x="186.66666666666663" y="0.0" width="186.33333333333337" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="NEXT">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" name="plant-middle-green"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="completionButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DUV-l8-h1Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Tal-cP-sgs"/>
+                                    <constraint firstAttribute="height" constant="50" id="Kbt-Pa-KfL"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="NEXT"/>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5r3-6R-p4r"/>
-                            <constraint firstItem="OQc-7I-y20" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AgK-BA-Qvj"/>
-                            <constraint firstItem="gLg-EC-kRO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ELf-U1-pZU"/>
-                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="JbW-bn-JCE"/>
-                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="bottom" secondItem="OQc-7I-y20" secondAttribute="top" id="OMY-ra-7cx"/>
-                            <constraint firstItem="OQc-7I-y20" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Rcg-DE-kYK"/>
-                            <constraint firstItem="R13-d9-FEv" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="SFc-ni-7ND"/>
-                            <constraint firstItem="OQc-7I-y20" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="T7T-tF-qJd"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gLg-EC-kRO" secondAttribute="trailing" id="aSe-Zh-9yn"/>
-                            <constraint firstItem="gLg-EC-kRO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cKe-yy-XF2"/>
-                            <constraint firstItem="R13-d9-FEv" firstAttribute="top" secondItem="gLg-EC-kRO" secondAttribute="bottom" id="d4f-co-hhy"/>
-                            <constraint firstItem="R13-d9-FEv" firstAttribute="bottom" secondItem="Jhk-HR-9Sz" secondAttribute="top" id="ngB-hl-JoD"/>
-                            <constraint firstItem="R13-d9-FEv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="rI2-Qv-noU"/>
+                            <constraint firstItem="R13-d9-FEv" firstAttribute="top" secondItem="gLg-EC-kRO" secondAttribute="bottom" id="0Um-iK-wy2"/>
+                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="top" secondItem="R13-d9-FEv" secondAttribute="bottom" id="28X-fA-3ec"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hsp-bM-DoE" secondAttribute="trailing" constant="10" id="2xu-Ch-nWX"/>
+                            <constraint firstItem="hsp-bM-DoE" firstAttribute="top" secondItem="Jhk-HR-9Sz" secondAttribute="bottom" id="5Xg-56-G9Y"/>
+                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="DGf-wY-QOP"/>
+                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="top" secondItem="R13-d9-FEv" secondAttribute="bottom" id="GmW-xh-2cF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hsp-bM-DoE" secondAttribute="bottom" constant="10" id="QbH-9a-sCa"/>
+                            <constraint firstItem="R13-d9-FEv" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="TfA-d0-HEc"/>
+                            <constraint firstItem="hsp-bM-DoE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="WXh-Wv-fv5"/>
+                            <constraint firstItem="Jhk-HR-9Sz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="YCF-29-ld0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gLg-EC-kRO" secondAttribute="trailing" id="uSu-n0-vYu"/>
+                            <constraint firstItem="gLg-EC-kRO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ujd-Zj-C90"/>
+                            <constraint firstItem="gLg-EC-kRO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xYA-ni-CRi"/>
+                            <constraint firstItem="R13-d9-FEv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="z6x-8X-ZqC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="n9C-AM-CgV" id="vRL-fD-2Fr"/>
                         <outlet property="collectionView" destination="R13-d9-FEv" id="PY4-sk-yhV"/>
+                        <outlet property="completionButton" destination="OQc-7I-y20" id="IEc-aF-GtZ"/>
+                        <outlet property="pager" destination="Jhk-HR-9Sz" id="BDL-nA-F1Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,6 +146,9 @@
         </namedColor>
         <namedColor name="plant-deep-moss-green">
             <color red="0.19215686274509805" green="0.40392156862745099" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="plant-middle-green">
+            <color red="0.25882352941176473" green="0.53725490196078429" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

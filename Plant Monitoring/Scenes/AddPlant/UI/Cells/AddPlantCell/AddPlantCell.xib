@@ -12,26 +12,26 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddPlantCell" id="ZIN-jI-Rd4" customClass="AddPlantCell" customModule="Plant_Monitoring" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="500" height="900"/>
+            <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OLx-43-7Gb">
-                <rect key="frame" x="0.0" y="0.0" width="500" height="900"/>
+                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aF2-zC-RWb">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2uX-Wu-org">
-                                <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="500" height="600"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NsZ-2p-XtO">
-                                        <rect key="frame" x="20" y="0.0" width="460" height="700"/>
+                                        <rect key="frame" x="20" y="0.0" width="460" height="600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-9q-dnS">
-                                                <rect key="frame" x="0.0" y="0.0" width="460" height="230"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="460" height="180"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-plant-icon" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-KJ-kxF">
-                                                        <rect key="frame" x="170" y="55" width="120" height="120"/>
+                                                        <rect key="frame" x="170" y="30" width="120" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="120" id="xy2-Wx-1r3"/>
                                                             <constraint firstAttribute="height" constant="120" id="ye4-e8-RUt"/>
@@ -45,17 +45,20 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e72-M3-zR9" customClass="TextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="260" width="460" height="60"/>
+                                                <rect key="frame" x="0.0" y="210" width="460" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="N7M-Ed-Wxw"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="add.plant.name"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVe-0Z-hVo" customClass="TextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="350" width="460" height="60"/>
+                                                <rect key="frame" x="0.0" y="300" width="460" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="CBy-bF-3M3"/>
@@ -65,28 +68,37 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJB-BR-BdZ" customClass="TextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="440" width="460" height="60"/>
+                                                <rect key="frame" x="0.0" y="390" width="460" height="60"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="npS-YT-Fi1"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="add.plant.location"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lh6-3x-42C" customClass="LongTextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="530" width="460" height="170"/>
+                                                <rect key="frame" x="0.0" y="480" width="460" height="120"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="170" id="Gdo-w5-M0u"/>
+                                                    <constraint firstAttribute="height" constant="120" id="Gdo-w5-M0u"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="add.plant.description"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                                        <integer key="value" value="150"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="NsZ-2p-XtO" secondAttribute="bottom" id="7Pn-SO-y5V"/>
-                                    <constraint firstAttribute="height" constant="700" id="HS0-is-UDq"/>
+                                    <constraint firstAttribute="height" constant="600" id="HS0-is-UDq"/>
                                     <constraint firstItem="NsZ-2p-XtO" firstAttribute="top" secondItem="2uX-Wu-org" secondAttribute="top" id="MWo-0W-8pv"/>
                                     <constraint firstItem="NsZ-2p-XtO" firstAttribute="leading" secondItem="2uX-Wu-org" secondAttribute="leading" constant="20" id="Z6i-mV-GYo"/>
                                     <constraint firstAttribute="trailing" secondItem="NsZ-2p-XtO" secondAttribute="trailing" constant="20" id="xH4-jc-4Og"/>

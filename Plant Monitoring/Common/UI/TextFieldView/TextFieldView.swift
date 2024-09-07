@@ -23,6 +23,8 @@ public final class TextFieldView: UIView, UITextFieldDelegate {
     set { descriptionLabel.text = newValue?.localized() }
   }
 
+  @IBInspectable var characterLimit: Int = 0
+
   // MARK: View's Lifecycle
 
   override init(frame: CGRect) {
@@ -56,5 +58,17 @@ public final class TextFieldView: UIView, UITextFieldDelegate {
     borderView.borderColor = UIColor.systemGray5
     borderView.borderWidth = 1
     descriptionLabel.textColor = UIColor.systemGray2
+  }
+
+  public func textField(_ textField: UITextField,
+                        shouldChangeCharactersIn range: NSRange,
+                        replacementString string: String) -> Bool {
+    guard characterLimit > 0 else {
+      return true
+    }
+
+    let currentText = textField.text.emptyIfNil
+    let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
+    return updatedText.count <= characterLimit
   }
 }

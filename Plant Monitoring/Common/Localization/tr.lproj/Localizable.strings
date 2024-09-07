@@ -34,9 +34,9 @@
 "onboarding.get.started" = "Başla";
 
 // MARK: - Add Plant
-"add.plant.name" = "Bitki Adı";
-"add.plant.type" = "Bitki Türü";
-"add.plant.location" = "Lokasyon";
+"add.plant.name" = "Bitki Adı*";
+"add.plant.type" = "Bitki Türü*";
+"add.plant.location" = "Lokasyon*";
 "add.plant.description" = "Açıklama";
 "add.plant.image.picker.sheet.camera" = "Kameradan Seç";
 "add.plant.image.picker.sheet.library" = "Kütüphaneden Seç";
@@ -44,3 +44,4 @@
 "add.plant.camera.access.denied.title" = "Kamera Erişimi Gerekli";
 "add.plant.library.access.denied.description" = "Bu uygulama, fotoğraf çekmek için kameraya erişim iznine ihtiyaç duyar. Ayarlara gidin ve kamera erişimini etkinleştirin.";
 "add.plant.library.access.denied.title" = "Fotoğraf Kütüphanesi Erişimi Gerekli";
+"add.plant.available.devices.title" = "Mevcut Cihazlar";

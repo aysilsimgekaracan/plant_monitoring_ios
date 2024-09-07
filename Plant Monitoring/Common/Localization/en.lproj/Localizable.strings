@@ -34,9 +34,9 @@
 "onboarding.get.started" = "Get Started";
 
 // MARK: - Add Plant
-"add.plant.name" = "Plant Name";
-"add.plant.type" = "Plant Type";
-"add.plant.location" = "Location";
+"add.plant.name" = "Plant Name*";
+"add.plant.type" = "Plant Type*";
+"add.plant.location" = "Location*";
 "add.plant.description" = "Description";
 "add.plant.image.picker.sheet.camera" = "Choose from Camera";
 "add.plant.image.picker.sheet.library" = "Choose from Library";
@@ -44,3 +44,4 @@
 "add.plant.camera.access.denied.title" = "Camera Access Required";
 "add.plant.library.access.denied.description" = "This app needs access to your camera to take photos. Go to Settings and enable camera access.";
 "add.plant.library.access.denied.title" = "Photo Library Access Required";
+"add.plant.available.devices.title" = "Available Devices";

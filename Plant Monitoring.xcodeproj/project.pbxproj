@@ -62,6 +62,11 @@
 		8B24678D2C887403003C58A6 /* ImagePickerSheetCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24678C2C887403003C58A6 /* ImagePickerSheetCoordinator.swift */; };
 		8B2467952C89976B003C58A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B2467932C89976B003C58A6 /* InfoPlist.strings */; };
 		8B2467982C899F49003C58A6 /* AddPlantDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2467972C899F49003C58A6 /* AddPlantDisplay.swift */; };
+		8B24679B2C8BA512003C58A6 /* Optional+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24679A2C8BA512003C58A6 /* Optional+Additions.swift */; };
+		8B24679E2C8BAC0E003C58A6 /* AvailableDevicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24679D2C8BAC0E003C58A6 /* AvailableDevicesCell.swift */; };
+		8B2467A02C8BAC1A003C58A6 /* AvailableDevicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B24679F2C8BAC1A003C58A6 /* AvailableDevicesCell.xib */; };
+		8B2467A32C8CBD86003C58A6 /* DevicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2467A22C8CBD86003C58A6 /* DevicesCell.swift */; };
+		8B2467A52C8CBD95003C58A6 /* DevicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B2467A42C8CBD95003C58A6 /* DevicesCell.xib */; };
 		8B3096F22C859EA000B3EDAA /* AddPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096F12C859EA000B3EDAA /* AddPlantViewController.swift */; };
 		8B3096F42C859EAB00B3EDAA /* AddPlantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096F32C859EAB00B3EDAA /* AddPlantViewModel.swift */; };
 		8B3096F62C859EB500B3EDAA /* AddPlantCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096F52C859EB500B3EDAA /* AddPlantCoordinator.swift */; };
@@ -167,6 +172,11 @@
 		8B2467942C89976B003C58A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B2467962C899783003C58A6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B2467972C899F49003C58A6 /* AddPlantDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantDisplay.swift; sourceTree = "<group>"; };
+		8B24679A2C8BA512003C58A6 /* Optional+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Additions.swift"; sourceTree = "<group>"; };
+		8B24679D2C8BAC0E003C58A6 /* AvailableDevicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDevicesCell.swift; sourceTree = "<group>"; };
+		8B24679F2C8BAC1A003C58A6 /* AvailableDevicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AvailableDevicesCell.xib; sourceTree = "<group>"; };
+		8B2467A22C8CBD86003C58A6 /* DevicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCell.swift; sourceTree = "<group>"; };
+		8B2467A42C8CBD95003C58A6 /* DevicesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DevicesCell.xib; sourceTree = "<group>"; };
 		8B3096F12C859EA000B3EDAA /* AddPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewController.swift; sourceTree = "<group>"; };
 		8B3096F32C859EAB00B3EDAA /* AddPlantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantViewModel.swift; sourceTree = "<group>"; };
 		8B3096F52C859EB500B3EDAA /* AddPlantCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantCoordinator.swift; sourceTree = "<group>"; };
@@ -563,6 +573,7 @@
 		3F7EDD2E2B66926300946FF9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8B2467992C8BA4F0003C58A6 /* Optional */,
 				8B801BB92C77BFD100097577 /* Int */,
 				0F6AA5342BE1069300DE32EA /* Date */,
 				0F4A86152B92081900EC6BD9 /* UserDefaults */,
@@ -645,6 +656,32 @@
 			path = InfoPlist;
 			sourceTree = "<group>";
 		};
+		8B2467992C8BA4F0003C58A6 /* Optional */ = {
+			isa = PBXGroup;
+			children = (
+				8B24679A2C8BA512003C58A6 /* Optional+Additions.swift */,
+			);
+			path = Optional;
+			sourceTree = "<group>";
+		};
+		8B24679C2C8BABFF003C58A6 /* AvailableDevicesCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B24679D2C8BAC0E003C58A6 /* AvailableDevicesCell.swift */,
+				8B24679F2C8BAC1A003C58A6 /* AvailableDevicesCell.xib */,
+			);
+			path = AvailableDevicesCell;
+			sourceTree = "<group>";
+		};
+		8B2467A12C8CBD78003C58A6 /* DevicesCell */ = {
+			isa = PBXGroup;
+			children = (
+				8B2467A22C8CBD86003C58A6 /* DevicesCell.swift */,
+				8B2467A42C8CBD95003C58A6 /* DevicesCell.xib */,
+			);
+			path = DevicesCell;
+			sourceTree = "<group>";
+		};
 		8B3096F02C859E7000B3EDAA /* AddPlant */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +707,8 @@
 		8B3096FA2C85A72600B3EDAA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8B2467A12C8CBD78003C58A6 /* DevicesCell */,
+				8B24679C2C8BABFF003C58A6 /* AvailableDevicesCell */,
 				8B3096FB2C85A72B00B3EDAA /* AddPlantCell */,
 			);
 			path = Cells;
@@ -930,10 +969,12 @@
 				8B801BB42C77497D00097577 /* GetOnboardingItems.json in Resources */,
 				0F028BE52B976587000C70F5 /* Plants.storyboard in Resources */,
 				8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */,
+				8B2467A02C8BAC1A003C58A6 /* AvailableDevicesCell.xib in Resources */,
 				3F7EDD242B66905B00946FF9 /* Home.storyboard in Resources */,
 				3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */,
 				8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */,
 				3F7EDD3D2B6694CD00946FF9 /* Splash.storyboard in Resources */,
+				8B2467A52C8CBD95003C58A6 /* DevicesCell.xib in Resources */,
 				0F028BCF2B9739ED000C70F5 /* EmptyPlantTrackCard.xib in Resources */,
 				8B2467742C873B96003C58A6 /* LongTextFieldView.xib in Resources */,
 			);
@@ -971,6 +1012,7 @@
 				0F028BE92B987242000C70F5 /* UIView+Additions.swift in Sources */,
 				8B3096FF2C85A7D900B3EDAA /* AddPlantCell.swift in Sources */,
 				8B45AB4D2C6CF1D700B5C6FE /* PlantDetailViewModel.swift in Sources */,
+				8B24679B2C8BA512003C58A6 /* Optional+Additions.swift in Sources */,
 				8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */,
 				0FEB092B2BA09F530039396F /* APIURLSessionDelegate.swift in Sources */,
 				0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */,
@@ -979,6 +1021,7 @@
 				0F07FBDE2B90B48000E2ED20 /* TokenItem.swift in Sources */,
 				8B3096F62C859EB500B3EDAA /* AddPlantCoordinator.swift in Sources */,
 				8B24678D2C887403003C58A6 /* ImagePickerSheetCoordinator.swift in Sources */,
+				8B24679E2C8BAC0E003C58A6 /* AvailableDevicesCell.swift in Sources */,
 				3F7EDCFC2B668CBC00946FF9 /* AppDelegate.swift in Sources */,
 				8B2467722C873B89003C58A6 /* LongTextFieldView.swift in Sources */,
 				8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */,
@@ -1021,6 +1064,7 @@
 				0F028BDF2B97656A000C70F5 /* PlantsViewController.swift in Sources */,
 				3F7EDD162B668FA400946FF9 /* ApplicationCoordinator.swift in Sources */,
 				0F4A86172B92083500EC6BD9 /* UserDefaults+Additions.swift in Sources */,
+				8B2467A32C8CBD86003C58A6 /* DevicesCell.swift in Sources */,
 				0FC8DCBC2B99A3B20070B4F0 /* NotificationService.swift in Sources */,
 				0F028BCD2B9739DB000C70F5 /* EmptyPlantTrackCard.swift in Sources */,
 				0F0FB7C32BA05DD6006D2BBF /* APIService.swift in Sources */,
