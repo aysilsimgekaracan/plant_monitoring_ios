@@ -10,7 +10,6 @@ import UIKit
 private struct Constants {
   public static let cellWitdh: CGFloat = 128
   public static let cellHeight: CGFloat = 128
-  public static let numberOfCells: Int = 20
   public static let minimumInteritemSpacing: Int = 10
   public static let minimumLineSpacingForSections: CGFloat = 10
 }
@@ -19,6 +18,14 @@ public final class AvailableDevicesCell: UICollectionViewCell,
                                          UICollectionViewDelegate,
                                          UICollectionViewDataSource,
                                          UICollectionViewDelegateFlowLayout {
+  // MARK: Properties
+
+  var availableDevices: [AvailableDeviceItem] = [] {
+    didSet {
+      collectionView.reloadData()
+    }
+  }
+
   // MARK: IBOutlets
 
   @IBOutlet weak var collectionView: UICollectionView!
@@ -38,10 +45,14 @@ public final class AvailableDevicesCell: UICollectionViewCell,
     collectionView.dataSource = self
   }
 
+  public func configure(with availableDevices: [AvailableDeviceItem]) {
+    self.availableDevices = availableDevices
+  }
+
   // MARK: UICollectionViewDelegate, UICollectionViewDataSource
 
   public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return Constants.numberOfCells
+    return availableDevices.count
   }
 
   public func collectionView(_ collectionView: UICollectionView,
@@ -50,6 +61,7 @@ public final class AvailableDevicesCell: UICollectionViewCell,
                                                         for: indexPath) as? DevicesCell else {
       fatalError("The dequeued cell is not an instance of DevicesCell")
     }
+    cell.configure(with: availableDevices[indexPath.row])
     return cell
   }
 
@@ -58,7 +70,8 @@ public final class AvailableDevicesCell: UICollectionViewCell,
                              sizeForItemAt indexPath: IndexPath) -> CGSize {
     let availableWidth = collectionView.frame.width
     let minimumCellWidth: CGFloat = Constants.cellWitdh
-    let numberOfItemsPerRow = max(Int(availableWidth / (minimumCellWidth + CGFloat(Constants.minimumInteritemSpacing))), 1) // Ensure at least 1 item per row
+    let numberOfItemsPerRow = max(Int(availableWidth /
+                                      (minimumCellWidth + CGFloat(Constants.minimumInteritemSpacing))), 1)
 
     let totalSpacing = CGFloat(Constants.minimumInteritemSpacing) * CGFloat(numberOfItemsPerRow - 1)
     let cellWidth = (availableWidth - totalSpacing) / CGFloat(numberOfItemsPerRow)

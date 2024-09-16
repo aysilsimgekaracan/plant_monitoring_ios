@@ -17,6 +17,17 @@ public final class AddPlantViewModel {
     self.coordinator = coordinator
   }
 
+  public func start() -> Promise<AddPlantDisplay> {
+    return Promise { seal in
+      APIService.shared.performRequest(task: GetAvailableDevicesTask()).done { availableDevices in
+        seal.fulfill(AddPlantDisplay(availableDevices: availableDevices))
+      }.catch { err in
+        print(err.localizedDescription)
+        seal.reject(err)
+      }
+    }
+  }
+
   public func handleCameraPermission() -> Promise<Void> {
     return Promise { seal in
       let status = AVCaptureDevice.authorizationStatus(for: .video)

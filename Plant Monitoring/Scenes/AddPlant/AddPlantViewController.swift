@@ -51,8 +51,15 @@ public final class AddPlantViewController: UIViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
     self.hideKeyboardWhenTappedAround()
-    prepareCollectionView()
-    prepareView()
+
+    viewModel.start().done { [weak self] display in
+      self?.display = display
+    }.catch { err in
+      NotificationService.shared.showNotification(body: err.localizedDescription) { }
+    }
+
+    self.prepareView()
+    self.prepareCollectionView()
   }
 
   public override func viewWillDisappear(_ animated: Bool) {
@@ -151,6 +158,7 @@ extension AddPlantViewController: UICollectionViewDelegate,
                                                           for: indexPath) as? AvailableDevicesCell else {
         fatalError("The dequeued cell is not an instance of AvailableDevicesCell")
       }
+      cell.configure(with: display.availableDevices)
       return cell
 
     default:

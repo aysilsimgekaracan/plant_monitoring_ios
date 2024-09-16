@@ -16,4 +16,9 @@ public final class DevicesCell: UICollectionViewCell {
     deviceNameLabel.text = deviceName
     deviceIDLabel.text = "ID: \(deviceID)"
   }
+
+  public func configure(with availableDevice: AvailableDeviceItem) {
+    deviceNameLabel.text = availableDevice.deviceName
+    deviceIDLabel.text = availableDevice.serialNumber
+  }
 }

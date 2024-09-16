@@ -52,6 +52,10 @@
 		3F7EDD3B2B6694C400946FF9 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7EDD3A2B6694C400946FF9 /* SplashCoordinator.swift */; };
 		3F7EDD3D2B6694CD00946FF9 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EDD3C2B6694CD00946FF9 /* Splash.storyboard */; };
 		3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7EDD3E2B66981E00946FF9 /* LaunchScreen.storyboard */; };
+		8B211CA82C98284100BDA3A9 /* DevicesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B211CA72C98284100BDA3A9 /* DevicesItem.swift */; };
+		8B211CAA2C98286F00BDA3A9 /* GetDevicesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B211CA92C98286F00BDA3A9 /* GetDevicesTask.swift */; };
+		8B211CB22C982E6A00BDA3A9 /* AvailableDevicesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B211CB12C982E6A00BDA3A9 /* AvailableDevicesItem.swift */; };
+		8B211CB42C982E8E00BDA3A9 /* GetAvailableDevicesTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B211CB32C982E8E00BDA3A9 /* GetAvailableDevicesTask.swift */; };
 		8B2467722C873B89003C58A6 /* LongTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2467712C873B89003C58A6 /* LongTextFieldView.swift */; };
 		8B2467742C873B96003C58A6 /* LongTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B2467732C873B96003C58A6 /* LongTextFieldView.xib */; };
 		8B2467802C885D10003C58A6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24677F2C885D10003C58A6 /* View.swift */; };
@@ -161,6 +165,10 @@
 		3F7EDD3A2B6694C400946FF9 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		3F7EDD3C2B6694CD00946FF9 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		3F7EDD3E2B66981E00946FF9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B211CA72C98284100BDA3A9 /* DevicesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesItem.swift; sourceTree = "<group>"; };
+		8B211CA92C98286F00BDA3A9 /* GetDevicesTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDevicesTask.swift; sourceTree = "<group>"; };
+		8B211CB12C982E6A00BDA3A9 /* AvailableDevicesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableDevicesItem.swift; sourceTree = "<group>"; };
+		8B211CB32C982E8E00BDA3A9 /* GetAvailableDevicesTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAvailableDevicesTask.swift; sourceTree = "<group>"; };
 		8B2467712C873B89003C58A6 /* LongTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTextFieldView.swift; sourceTree = "<group>"; };
 		8B2467732C873B96003C58A6 /* LongTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LongTextFieldView.xib; sourceTree = "<group>"; };
 		8B24677F2C885D10003C58A6 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -526,6 +534,7 @@
 		3F7EDD132B668F3C00946FF9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8B211CAD2C982E2100BDA3A9 /* AddDevices */,
 				8B3096F02C859E7000B3EDAA /* AddPlant */,
 				3F7EDD1B2B66901700946FF9 /* Home */,
 				8B801BA22C77215200097577 /* Onboarding */,
@@ -602,6 +611,64 @@
 				3F7EDD3C2B6694CD00946FF9 /* Splash.storyboard */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		8B211CA42C98281100BDA3A9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CA62C98281C00BDA3A9 /* Model */,
+				8B211CA52C98281700BDA3A9 /* Task */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8B211CA52C98281700BDA3A9 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CA92C98286F00BDA3A9 /* GetDevicesTask.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		8B211CA62C98281C00BDA3A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CA72C98284100BDA3A9 /* DevicesItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B211CAD2C982E2100BDA3A9 /* AddDevices */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CA42C98281100BDA3A9 /* API */,
+			);
+			path = AddDevices;
+			sourceTree = "<group>";
+		};
+		8B211CAE2C982E3200BDA3A9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CB02C982E4000BDA3A9 /* Model */,
+				8B211CAF2C982E3B00BDA3A9 /* Task */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8B211CAF2C982E3B00BDA3A9 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CB32C982E8E00BDA3A9 /* GetAvailableDevicesTask.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		8B211CB02C982E4000BDA3A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B211CB12C982E6A00BDA3A9 /* AvailableDevicesItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		8B2467702C873B49003C58A6 /* LongTextFieldView */ = {
@@ -685,6 +752,7 @@
 		8B3096F02C859E7000B3EDAA /* AddPlant */ = {
 			isa = PBXGroup;
 			children = (
+				8B211CAE2C982E3200BDA3A9 /* API */,
 				8B3096F92C85A72100B3EDAA /* UI */,
 				8B3096F12C859EA000B3EDAA /* AddPlantViewController.swift */,
 				8B3096F32C859EAB00B3EDAA /* AddPlantViewModel.swift */,
@@ -697,9 +765,9 @@
 		8B3096F92C85A72100B3EDAA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8B2467972C899F49003C58A6 /* AddPlantDisplay.swift */,
 				8B2467842C886C9B003C58A6 /* Scenes */,
 				8B3096FA2C85A72600B3EDAA /* Cells */,
-				8B2467972C899F49003C58A6 /* AddPlantDisplay.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1016,6 +1084,7 @@
 				8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */,
 				0FEB092B2BA09F530039396F /* APIURLSessionDelegate.swift in Sources */,
 				0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */,
+				8B211CB22C982E6A00BDA3A9 /* AvailableDevicesItem.swift in Sources */,
 				0F6AA5362BE106A000DE32EA /* Date+Additions.swift in Sources */,
 				3F7EDD3B2B6694C400946FF9 /* SplashCoordinator.swift in Sources */,
 				0F07FBDE2B90B48000E2ED20 /* TokenItem.swift in Sources */,
@@ -1033,6 +1102,7 @@
 				8B801BAF2C7729DA00097577 /* Button.swift in Sources */,
 				3F7EDD1A2B66901400946FF9 /* TabBarCoordinator.swift in Sources */,
 				8B3097062C85AA0B00B3EDAA /* TextFieldView.swift in Sources */,
+				8B211CA82C98284100BDA3A9 /* DevicesItem.swift in Sources */,
 				8B801BBF2C77C11900097577 /* OnboardingCell.swift in Sources */,
 				8B801BBB2C77BFE800097577 /* Int+Additions.swift in Sources */,
 				8B801BB62C774A1300097577 /* OnboardingItem.swift in Sources */,
@@ -1062,6 +1132,7 @@
 				0F028BD52B974DA4000C70F5 /* HomeDisplay.swift in Sources */,
 				8B2467832C886004003C58A6 /* UIResponder+Additions.swift in Sources */,
 				0F028BDF2B97656A000C70F5 /* PlantsViewController.swift in Sources */,
+				8B211CB42C982E8E00BDA3A9 /* GetAvailableDevicesTask.swift in Sources */,
 				3F7EDD162B668FA400946FF9 /* ApplicationCoordinator.swift in Sources */,
 				0F4A86172B92083500EC6BD9 /* UserDefaults+Additions.swift in Sources */,
 				8B2467A32C8CBD86003C58A6 /* DevicesCell.swift in Sources */,
@@ -1069,6 +1140,7 @@
 				0F028BCD2B9739DB000C70F5 /* EmptyPlantTrackCard.swift in Sources */,
 				0F0FB7C32BA05DD6006D2BBF /* APIService.swift in Sources */,
 				8B2467982C899F49003C58A6 /* AddPlantDisplay.swift in Sources */,
+				8B211CAA2C98286F00BDA3A9 /* GetDevicesTask.swift in Sources */,
 				8B2467802C885D10003C58A6 /* View.swift in Sources */,
 				8B801BA62C77218200097577 /* OnboardingViewModel.swift in Sources */,
 				0F07FBCC2B84BF7700E2ED20 /* Bundle+Additions.swift in Sources */,

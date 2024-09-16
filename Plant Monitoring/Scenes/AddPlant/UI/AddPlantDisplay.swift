@@ -12,5 +12,11 @@ public struct AddPlantDisplay {
   let cameraDeniedDescription = "add.plant.library.access.denied.description".localized()
   let libraryDeniedTitle = "add.plant.library.access.denied.title".localized()
 
-  static let empty: AddPlantDisplay = AddPlantDisplay()
+  public let availableDevices: [AvailableDeviceItem]
+
+  static let empty: AddPlantDisplay = AddPlantDisplay(availableDevices: [])
+
+  public init(availableDevices: [AvailableDeviceItem]) {
+    self.availableDevices = availableDevices
+  }
 }
