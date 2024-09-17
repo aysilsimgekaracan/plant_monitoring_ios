@@ -13,6 +13,7 @@
                 <outlet property="borderView" destination="Z3g-z1-Bkl" id="eu0-Dd-vwc"/>
                 <outlet property="contentView" destination="sI7-nO-e5r" id="ajI-rD-XMJ"/>
                 <outlet property="descriptionLabel" destination="M1R-5N-czK" id="Ufg-sj-l5P"/>
+                <outlet property="errorLabel" destination="2yF-rv-yD5" id="xEv-5C-LkS"/>
                 <outlet property="textField" destination="cUw-RP-xfo" id="gpG-VG-Djq"/>
             </connections>
         </placeholder>
@@ -22,10 +23,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3g-z1-Bkl" customClass="View" customModule="Plant_Monitoring" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="56.666666666666664"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-2S-s0n">
-                            <rect key="frame" x="10" y="5" width="373" height="63"/>
+                            <rect key="frame" x="10" y="5" width="373" height="49.666666666666664"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1R-5N-czK">
                                     <rect key="frame" x="0.0" y="0.0" width="373" height="15.666666666666666"/>
@@ -34,7 +35,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cUw-RP-xfo" customClass="TextField" customModule="Plant_Monitoring" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="20.666666666666668" width="373" height="42.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="20.666666666666671" width="373" height="29"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -60,13 +61,22 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yF-rv-yD5">
+                    <rect key="frame" x="0.0" y="56.666666666666664" width="393" height="13.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="2yF-rv-yD5" secondAttribute="trailing" id="4nr-TH-zgg"/>
                 <constraint firstAttribute="trailing" secondItem="Z3g-z1-Bkl" secondAttribute="trailing" id="8WC-eq-DBW"/>
+                <constraint firstItem="2yF-rv-yD5" firstAttribute="top" secondItem="Z3g-z1-Bkl" secondAttribute="bottom" id="AEW-Qj-wRD"/>
                 <constraint firstItem="Z3g-z1-Bkl" firstAttribute="leading" secondItem="sI7-nO-e5r" secondAttribute="leading" id="Yhx-l5-9rK"/>
+                <constraint firstAttribute="bottom" secondItem="2yF-rv-yD5" secondAttribute="bottom" id="cpk-iX-Gn0"/>
                 <constraint firstItem="Z3g-z1-Bkl" firstAttribute="top" secondItem="sI7-nO-e5r" secondAttribute="top" id="ijQ-ea-hCx"/>
-                <constraint firstAttribute="bottom" secondItem="Z3g-z1-Bkl" secondAttribute="bottom" id="wAy-5r-RZs"/>
+                <constraint firstItem="2yF-rv-yD5" firstAttribute="leading" secondItem="sI7-nO-e5r" secondAttribute="leading" id="neu-bi-XKl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="74" y="-2"/>
@@ -81,6 +91,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -20,7 +20,22 @@ public final class AddPlantViewModel {
   public func start() -> Promise<AddPlantDisplay> {
     return Promise { seal in
       APIService.shared.performRequest(task: GetAvailableDevicesTask()).done { availableDevices in
-        seal.fulfill(AddPlantDisplay(availableDevices: availableDevices))
+        seal.fulfill(AddPlantDisplay(availableDevices: availableDevices, plantDetails: PlantDetails.empty))
+      }.catch { err in
+        print(err.localizedDescription)
+        seal.reject(err)
+      }
+    }
+  }
+
+  public func createPlant(from plant: PlantDetails) -> Promise<CreatePlantItem> {
+    return Promise { seal in
+      APIService.shared.performRequest(task: CreatePlantTask(name: plant.name,
+                                                             type: plant.type,
+                                                             location: plant.location,
+                                                             description: plant.description))
+      .done { createPlantItem in
+        seal.fulfill(createPlantItem)
       }.catch { err in
         print(err.localizedDescription)
         seal.reject(err)

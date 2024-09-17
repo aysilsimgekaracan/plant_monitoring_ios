@@ -10,7 +10,7 @@
 "tab.home" = "Home";
 "tab.plants" = "Plants";
 
-// MARK: - NotificationService
+// MARK: - Notification Service
 "notification.service.error.title" = "Error";
 "notification.service.http.request.error.body" = "Check your internet connection.";
 "notification.service.button.title" = "OK";
@@ -19,7 +19,7 @@
 "home.empty.plant.track.card.title" = "Track Your Favorite Plants";
 "home.empty.plant.track.card.detail" = "To track a plant, go to Plants page and follow your favorite plant.";
 
-// MARK: - PlantDetail
+// MARK: - Plant Detail
 "plant.detail.last.update" = "Last update at: ";
 
 // MARK: - Onboarding
@@ -45,3 +45,16 @@
 "add.plant.library.access.denied.description" = "This app needs access to your camera to take photos. Go to Settings and enable camera access.";
 "add.plant.library.access.denied.title" = "Photo Library Access Required";
 "add.plant.available.devices.title" = "Available Devices";
+"add.plant.empty.available.device.title" = "There is no available device to match with the plant.";
+"add.plant.empty.available.device.button.title" = "Save the Plant and Add a New Device";
+"add.plant.success.title" = "Success!";
+"add.plant.success.body" = "Your plant is created.";
+"add.plant.success.add.device.body" = "Your plant is created. You will be navigated to add a new device.";
+"add.plant.failure.title" = "Failure";
+"add.plant.failure.body" = "Your plant couldn't be added due to an unexpected issue.";
+
+// MARK: Validation Service
+"validation.error.too.short" =  "The text is too short.";
+"validation.error.too.long" = "The text is too long.";
+"validation.error.invalid.format" = "The format is invalid.";
+"validation.general.error" = "You have validation errors, please fix them before continuing.";

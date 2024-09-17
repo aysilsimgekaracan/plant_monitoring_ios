@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AvailableDevicesCellDelegate: AnyObject {
+  func didTapAddANewDevice(_ cell: UICollectionViewCell)
+}
+
 private struct Constants {
   public static let cellWitdh: CGFloat = 128
   public static let cellHeight: CGFloat = 128
@@ -20,15 +24,25 @@ public final class AvailableDevicesCell: UICollectionViewCell,
                                          UICollectionViewDelegateFlowLayout {
   // MARK: Properties
 
+  weak var delegate: AvailableDevicesCellDelegate?
   var availableDevices: [AvailableDeviceItem] = [] {
     didSet {
-      collectionView.reloadData()
+      if availableDevices.isEmpty {
+        emptyDeviceStackView.isHidden = false
+        availableDevicesStackView.isHidden = true
+      } else {
+        availableDevicesStackView.isHidden = false
+        emptyDeviceStackView.isHidden = true
+        collectionView.reloadData()
+      }
     }
   }
 
   // MARK: IBOutlets
 
   @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var availableDevicesStackView: UIStackView!
+  @IBOutlet weak var emptyDeviceStackView: UIStackView!
 
   // MARK: Lifecylce
 
@@ -43,10 +57,17 @@ public final class AvailableDevicesCell: UICollectionViewCell,
 
     collectionView.delegate = self
     collectionView.dataSource = self
+    emptyDeviceStackView.isHidden = true
   }
 
   public func configure(with availableDevices: [AvailableDeviceItem]) {
     self.availableDevices = availableDevices
+  }
+
+  // MARK: IBActions
+
+  @IBAction func addANewDeviceButtonPressed(_ sender: Any) {
+    delegate?.didTapAddANewDevice(self)
   }
 
   // MARK: UICollectionViewDelegate, UICollectionViewDataSource
@@ -89,5 +110,17 @@ public final class AvailableDevicesCell: UICollectionViewCell,
                              layout collectionViewLayout: UICollectionViewLayout,
                              minimumLineSpacingForSectionAt section: Int) -> CGFloat {
     return Constants.minimumLineSpacingForSections
+  }
+
+  public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    if let cell = collectionView.cellForItem(at: indexPath) as? DevicesCell {
+      cell.highlightSelectedCell()
+    }
+  }
+
+  public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    if let cell = collectionView.cellForItem(at: indexPath) as? DevicesCell {
+      cell.unhighlightDeselectedCell()
+    }
   }
 }

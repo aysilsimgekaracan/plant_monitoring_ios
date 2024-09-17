@@ -45,3 +45,16 @@
 "add.plant.library.access.denied.description" = "Bu uygulama, fotoğraf çekmek için kameraya erişim iznine ihtiyaç duyar. Ayarlara gidin ve kamera erişimini etkinleştirin.";
 "add.plant.library.access.denied.title" = "Fotoğraf Kütüphanesi Erişimi Gerekli";
 "add.plant.available.devices.title" = "Mevcut Cihazlar";
+"add.plant.empty.available.device.title" = "Bitkiyle eşleştirilebilecek mevcut cihaz bulunamadı.";
+"add.plant.empty.available.device.button.title" = "Bitkiyi Kaydet ve Yeni Bir Cihaz Ekle";
+"add.plant.success.title" = "Başarılı!";
+"add.plant.success.body" = "Bitkiniz oluşturuldu.";
+"add.plant.success.add.device.body" = "Bitkiniz oluşturuldu. Yeni bir cihaz eklemek için yönlendirileceksiniz.";
+"add.plant.failure.title" = "Başarısız";
+"add.plant.failure.body" = "nBitkiniz beklenmedik bir sorun nedeniyle eklenemedi.";
+
+// MARK: Validation Service
+"validation.error.too.short" = "Metin çok kısa.";
+"validation.error.too.long" = "Metin çok uzun.";
+"validation.error.invalid.format" = "Format geçersiz.";
+"validation.general.error" = "Doğrulama hatalarınız var, lütfen devam etmeden önce düzeltin.";

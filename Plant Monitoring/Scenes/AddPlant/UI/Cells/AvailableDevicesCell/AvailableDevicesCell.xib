@@ -18,6 +18,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="500" height="700"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U4p-pN-vve">
+                        <rect key="frame" x="10" y="300" width="480" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bub-Ys-kok" customClass="Label" customModule="Plant_Monitoring" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="add.plant.empty.available.device.title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="new-Up-Gi6" customClass="Button" customModule="Plant_Monitoring" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="100"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="add.plant.empty.available.device.button.title"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addANewDeviceButtonPressed:" destination="Iaa-oK-SRB" eventType="touchUpInside" id="TWt-qF-3rS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="oRg-eR-vde"/>
+                        </constraints>
+                    </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-UM-kd5">
                         <rect key="frame" x="10" y="0.0" width="480" height="700"/>
                         <subviews>
@@ -47,14 +75,20 @@
                     </stackView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="U4p-pN-vve" firstAttribute="leading" secondItem="i1L-pP-6xX" secondAttribute="leading" constant="10" id="2P1-cv-ems"/>
                     <constraint firstItem="Fza-UM-kd5" firstAttribute="leading" secondItem="i1L-pP-6xX" secondAttribute="leading" constant="10" id="ReP-sn-A6f"/>
+                    <constraint firstItem="U4p-pN-vve" firstAttribute="centerY" secondItem="i1L-pP-6xX" secondAttribute="centerY" id="S33-4b-sFK"/>
                     <constraint firstAttribute="bottom" secondItem="Fza-UM-kd5" secondAttribute="bottom" id="UgQ-gL-SAd"/>
                     <constraint firstAttribute="trailing" secondItem="Fza-UM-kd5" secondAttribute="trailing" constant="10" id="VFk-g2-EkX"/>
+                    <constraint firstItem="U4p-pN-vve" firstAttribute="centerX" secondItem="i1L-pP-6xX" secondAttribute="centerX" id="ckf-ks-yqi"/>
                     <constraint firstItem="Fza-UM-kd5" firstAttribute="top" secondItem="i1L-pP-6xX" secondAttribute="top" id="rSS-eq-KXt"/>
+                    <constraint firstAttribute="trailing" secondItem="U4p-pN-vve" secondAttribute="trailing" constant="10" id="xKx-IU-6oA"/>
                 </constraints>
             </collectionViewCellContentView>
             <connections>
+                <outlet property="availableDevicesStackView" destination="Fza-UM-kd5" id="be3-Da-wD0"/>
                 <outlet property="collectionView" destination="1MN-9b-ycB" id="aP5-c9-LPg"/>
+                <outlet property="emptyDeviceStackView" destination="U4p-pN-vve" id="oTt-Yx-a2K"/>
             </connections>
             <point key="canvasLocation" x="126.71755725190839" y="-38.028169014084511"/>
         </collectionViewCell>

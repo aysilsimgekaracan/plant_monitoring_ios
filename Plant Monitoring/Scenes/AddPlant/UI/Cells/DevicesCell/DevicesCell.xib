@@ -82,6 +82,7 @@
                 </constraints>
             </collectionViewCellContentView>
             <connections>
+                <outlet property="borderView" destination="c4a-NZ-AXh" id="bIw-9m-ece"/>
                 <outlet property="deviceIDLabel" destination="Krd-ts-DfA" id="wIt-Jg-LmH"/>
                 <outlet property="deviceNameLabel" destination="Qip-cT-7nt" id="cyN-bU-enC"/>
             </connections>

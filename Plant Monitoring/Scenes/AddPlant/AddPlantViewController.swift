@@ -25,7 +25,7 @@ public final class AddPlantViewController: UIViewController {
 
   var viewModel: AddPlantViewModel!
   var display: AddPlantDisplay = .empty
-  var currentPage: Int = 0 {
+  var currentPage: Int = .zero {
     didSet {
       pager.currentPage = currentPage
       prepareStep(for: currentPage)
@@ -77,9 +77,24 @@ public final class AddPlantViewController: UIViewController {
     if currentPage == CellTypes.allCases.count - 1 {
       // TODO: continue next step
     } else {
-      let nextPage = currentPage + 1
-      collectionView.scrollToItem(at: IndexPath(item: nextPage, section: 0), at: .centeredHorizontally, animated: true)
-      currentPage = nextPage
+      if let visibleCells = collectionView.visibleCells as? [AddPlantCell] {
+        for cell in visibleCells {
+          display.plantDetails = cell.getPlantDetails()
+        }
+        if !display.plantDetails.isValid {
+          NotificationService.shared.showNotification(body: "validation.general.error".localized()) { }
+        } else {
+          let nextPage = currentPage + 1
+          collectionView.scrollToItem(at: IndexPath(item: nextPage,
+                                                  section: 0),
+                                      at: .centeredHorizontally,
+                                      animated: true)
+          currentPage = nextPage
+          if display.availableDevices.isEmpty {
+            completionButton.isHidden = true
+          }
+        }
+      }
     }
   }
 
@@ -88,6 +103,7 @@ public final class AddPlantViewController: UIViewController {
       let nextPage = currentPage - 1
       collectionView.scrollToItem(at: IndexPath(item: nextPage, section: 0), at: .centeredHorizontally, animated: true)
       currentPage = nextPage
+      completionButton.isHidden = false
     }
 
   }
@@ -159,6 +175,7 @@ extension AddPlantViewController: UICollectionViewDelegate,
         fatalError("The dequeued cell is not an instance of AvailableDevicesCell")
       }
       cell.configure(with: display.availableDevices)
+      cell.delegate = self
       return cell
 
     default:
@@ -245,5 +262,23 @@ extension AddPlantViewController: PHPickerViewControllerDelegate {
         }
       }
     }
+  }
+}
+
+// MARK: AvailableDevicesCellDelegate
+
+extension AddPlantViewController: AvailableDevicesCellDelegate {
+  func didTapAddANewDevice(_ cell: UICollectionViewCell) {
+    // TODO: Save the plant and navigate to the add a new device scene
+    showLoadingIndicator()
+    viewModel.createPlant(from: display.plantDetails).done { [weak self] _ in
+      NotificationService.shared.showNotification(layout: .message,
+                                                  theme: .success,
+                                                  title: "add.plant.success.title".localized(),
+                                                  body: "add.plant.success.add.device.body".localized()) {
+        // TODO: navigate to add a new device screen
+        self?.hideLoadingIndicator()
+      }
+    }.cauterize()
   }
 }

@@ -28,10 +28,10 @@
                                         <rect key="frame" x="20" y="0.0" width="460" height="600"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydi-9q-dnS">
-                                                <rect key="frame" x="0.0" y="0.0" width="460" height="180"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="460" height="150"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-plant-icon" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-KJ-kxF">
-                                                        <rect key="frame" x="170" y="30" width="120" height="120"/>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-plant-icon" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-KJ-kxF">
+                                                        <rect key="frame" x="170" y="15" width="120" height="120"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="120" id="xy2-Wx-1r3"/>
                                                             <constraint firstAttribute="height" constant="120" id="ye4-e8-RUt"/>
@@ -45,10 +45,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e72-M3-zR9" customClass="TextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="210" width="460" height="60"/>
+                                                <rect key="frame" x="0.0" y="180" width="460" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="N7M-Ed-Wxw"/>
+                                                    <constraint firstAttribute="height" constant="70" id="N7M-Ed-Wxw"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="add.plant.name"/>
@@ -58,20 +58,20 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVe-0Z-hVo" customClass="TextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="300" width="460" height="60"/>
+                                                <rect key="frame" x="0.0" y="280" width="460" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="CBy-bF-3M3"/>
+                                                    <constraint firstAttribute="height" constant="70" id="CBy-bF-3M3"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="add.plant.type"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJB-BR-BdZ" customClass="TextFieldView" customModule="Plant_Monitoring" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="390" width="460" height="60"/>
+                                                <rect key="frame" x="0.0" y="380" width="460" height="70"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="npS-YT-Fi1"/>
+                                                    <constraint firstAttribute="height" constant="70" id="npS-YT-Fi1"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionText" value="add.plant.location"/>
@@ -124,7 +124,11 @@
                 </constraints>
             </collectionViewCellContentView>
             <connections>
+                <outlet property="descriptionLongTextFieldView" destination="Lh6-3x-42C" id="gpi-cg-vML"/>
                 <outlet property="imageView" destination="kuC-KJ-kxF" id="fU2-jF-njL"/>
+                <outlet property="locationTextFieldView" destination="wJB-BR-BdZ" id="Z4R-RA-Skc"/>
+                <outlet property="nameTextFieldView" destination="e72-M3-zR9" id="qJx-jq-cty"/>
+                <outlet property="typeTextFieldView" destination="BVe-0Z-hVo" id="aj2-a0-9Rh"/>
             </connections>
             <point key="canvasLocation" x="80.916030534351137" y="-27.464788732394368"/>
         </collectionViewCell>

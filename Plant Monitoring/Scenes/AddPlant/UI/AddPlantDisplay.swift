@@ -7,16 +7,28 @@
 
 import Foundation
 
+public struct PlantDetails {
+  var name: String
+  var type: String
+  var location: String
+  var description: String
+  var isValid: Bool
+
+  static let empty: PlantDetails = PlantDetails(name: "", type: "", location: "", description: "", isValid: false)
+}
+
 public struct AddPlantDisplay {
   let cameraDeniedTitle = "add.plant.camera.access.denied.title".localized()
   let cameraDeniedDescription = "add.plant.library.access.denied.description".localized()
   let libraryDeniedTitle = "add.plant.library.access.denied.title".localized()
 
   public let availableDevices: [AvailableDeviceItem]
+  public var plantDetails: PlantDetails
 
-  static let empty: AddPlantDisplay = AddPlantDisplay(availableDevices: [])
+  static let empty: AddPlantDisplay = AddPlantDisplay(availableDevices: [], plantDetails: PlantDetails.empty)
 
-  public init(availableDevices: [AvailableDeviceItem]) {
+  public init(availableDevices: [AvailableDeviceItem], plantDetails: PlantDetails) {
     self.availableDevices = availableDevices
+    self.plantDetails = plantDetails
   }
 }
