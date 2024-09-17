@@ -34,6 +34,11 @@ public final class AddPlantCoordinator: Coordinator {
     let coordinator = ImagePickerSheetCoordinator(navigationController: navigationController, delegate: delegate)
     coordinator.start()
   }
+  
+  func showAddDevice() {
+    let coordinator = AddDeviceCoordinator(navigationController: navigationController)
+    coordinator.start()
+  }
 
   func navigateBack() {
     navigationController.popViewController(animated: true)

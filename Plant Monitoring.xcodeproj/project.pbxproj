@@ -90,6 +90,9 @@
 		8B733C7D2C99BA6F006E0173 /* TextValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B733C7C2C99BA6F006E0173 /* TextValidator.swift */; };
 		8B733C7F2C9A1032006E0173 /* CreatePlantItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B733C7E2C9A1032006E0173 /* CreatePlantItem.swift */; };
 		8B733C812C9A1076006E0173 /* CreatePlantTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B733C802C9A1076006E0173 /* CreatePlantTask.swift */; };
+		8B733C832C9A1649006E0173 /* AddDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B733C822C9A1649006E0173 /* AddDeviceViewModel.swift */; };
+		8B733C852C9A1656006E0173 /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B733C842C9A1656006E0173 /* AddDevice.storyboard */; };
+		8B733C872C9A1738006E0173 /* AddDeviceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B733C862C9A1738006E0173 /* AddDeviceCoordinator.swift */; };
 		8B7C3E622C6FBC2100B6041C /* loading-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E612C6FBC2100B6041C /* loading-animation.json */; };
 		8B7C3E642C6FBC2E00B6041C /* splash-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C3E632C6FBC2E00B6041C /* splash-animation.json */; };
 		8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */; };
@@ -211,6 +214,9 @@
 		8B733C7C2C99BA6F006E0173 /* TextValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValidator.swift; sourceTree = "<group>"; };
 		8B733C7E2C9A1032006E0173 /* CreatePlantItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlantItem.swift; sourceTree = "<group>"; };
 		8B733C802C9A1076006E0173 /* CreatePlantTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlantTask.swift; sourceTree = "<group>"; };
+		8B733C822C9A1649006E0173 /* AddDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewModel.swift; sourceTree = "<group>"; };
+		8B733C842C9A1656006E0173 /* AddDevice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
+		8B733C862C9A1738006E0173 /* AddDeviceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceCoordinator.swift; sourceTree = "<group>"; };
 		8B7C3E612C6FBC2100B6041C /* loading-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading-animation.json"; sourceTree = "<group>"; };
 		8B7C3E632C6FBC2E00B6041C /* splash-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "splash-animation.json"; sourceTree = "<group>"; };
 		8B801BA02C74D4DD00097577 /* UIImageView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Additions.swift"; sourceTree = "<group>"; };
@@ -546,14 +552,14 @@
 			children = (
 				8B211CAD2C982E2100BDA3A9 /* AddDevice */,
 				8B3096F02C859E7000B3EDAA /* AddPlant */,
+				3F7EDD152B668FA400946FF9 /* ApplicationCoordinator.swift */,
+				3F7EDD172B668FAD00946FF9 /* Coordinator.swift */,
 				3F7EDD1B2B66901700946FF9 /* Home */,
 				8B801BA22C77215200097577 /* Onboarding */,
 				8B45AB472C6CF1D700B5C6FE /* PlantDetail */,
 				0F028BDD2B976550000C70F5 /* Plants */,
 				3F7EDD352B66949B00946FF9 /* Splash */,
-				3F7EDD152B668FA400946FF9 /* ApplicationCoordinator.swift */,
 				3F7EDD192B66901400946FF9 /* TabBarCoordinator.swift */,
-				3F7EDD172B668FAD00946FF9 /* Coordinator.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -654,6 +660,9 @@
 			children = (
 				8B211CA42C98281100BDA3A9 /* API */,
 				8B733C772C996A83006E0173 /* AddDeviceViewController.swift */,
+				8B733C822C9A1649006E0173 /* AddDeviceViewModel.swift */,
+				8B733C862C9A1738006E0173 /* AddDeviceCoordinator.swift */,
+				8B733C842C9A1656006E0173 /* AddDevice.storyboard */,
 			);
 			path = AddDevice;
 			sourceTree = "<group>";
@@ -1065,6 +1074,7 @@
 				3F7EDD3F2B66981E00946FF9 /* LaunchScreen.storyboard in Resources */,
 				8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */,
 				3F7EDD3D2B6694CD00946FF9 /* Splash.storyboard in Resources */,
+				8B733C852C9A1656006E0173 /* AddDevice.storyboard in Resources */,
 				8B2467A52C8CBD95003C58A6 /* DevicesCell.xib in Resources */,
 				0F028BCF2B9739ED000C70F5 /* EmptyPlantTrackCard.xib in Resources */,
 				8B2467742C873B96003C58A6 /* LongTextFieldView.xib in Resources */,
@@ -1142,12 +1152,14 @@
 				8B733C7B2C99B96D006E0173 /* ValidationService.swift in Sources */,
 				8B733C812C9A1076006E0173 /* CreatePlantTask.swift in Sources */,
 				8B45AB562C6CF30E00B5C6FE /* PlantCell.swift in Sources */,
+				8B733C872C9A1738006E0173 /* AddDeviceCoordinator.swift in Sources */,
 				3F7EDD312B66927B00946FF9 /* String+Additions.swift in Sources */,
 				0F028BC92B973630000C70F5 /* Colors.swift in Sources */,
 				8B801BB82C774AF800097577 /* OnboardingDisplay.swift in Sources */,
 				3F7EDCFE2B668CBC00946FF9 /* SceneDelegate.swift in Sources */,
 				0F028BE32B97657F000C70F5 /* PlantsCoordinator.swift in Sources */,
 				8B24678B2C8873F3003C58A6 /* ImagePickerSheetViewModel.swift in Sources */,
+				8B733C832C9A1649006E0173 /* AddDeviceViewModel.swift in Sources */,
 				8B45AB4B2C6CF1D700B5C6FE /* PlantDetailCoordinator.swift in Sources */,
 				8B45AB482C6CF1D700B5C6FE /* StatusBar.swift in Sources */,
 				8B45AB4C2C6CF1D700B5C6FE /* PlantDetailViewController.swift in Sources */,

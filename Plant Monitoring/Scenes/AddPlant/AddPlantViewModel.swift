@@ -75,4 +75,8 @@ public final class AddPlantViewModel {
   func showImagePickerSheet(delegate: ImagePickerSheetDelegate) {
     coordinator.showImagePickerSheet(delegate: delegate)
   }
+  
+  public func showAddDevice() {
+    coordinator.showAddDevice()
+  }
 }

@@ -34,6 +34,7 @@
 "onboarding.get.started" = "Get Started";
 
 // MARK: - Add Plant
+"add.plant.add.new.plant" = "Add a New Plant";
 "add.plant.name" = "Plant Name*";
 "add.plant.type" = "Plant Type*";
 "add.plant.location" = "Location*";

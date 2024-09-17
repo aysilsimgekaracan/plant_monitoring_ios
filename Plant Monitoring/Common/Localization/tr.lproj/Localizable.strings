@@ -34,6 +34,7 @@
 "onboarding.get.started" = "Başla";
 
 // MARK: - Add Plant
+"add.plant.add.new.plant" = "Yeni Bir Bitki Ekle";
 "add.plant.name" = "Bitki Adı*";
 "add.plant.type" = "Bitki Türü*";
 "add.plant.location" = "Lokasyon*";

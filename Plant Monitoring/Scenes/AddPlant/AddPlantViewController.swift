@@ -278,6 +278,7 @@ extension AddPlantViewController: AvailableDevicesCellDelegate {
                                                   body: "add.plant.success.add.device.body".localized()) {
         // TODO: navigate to add a new device screen
         self?.hideLoadingIndicator()
+        self?.viewModel.showAddDevice()
       }
     }.cauterize()
   }
