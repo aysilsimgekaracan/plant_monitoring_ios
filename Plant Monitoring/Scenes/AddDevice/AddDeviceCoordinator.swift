@@ -17,13 +17,14 @@ public final class AddDeviceCoordinator: Coordinator {
 
   func start() {
     let storyboard = UIStoryboard(name: "AddDevice", bundle: nil)
-    guard let viewController = storyboard.instantiateViewController(withIdentifier: "AddDevice") as? AddDeviceViewController else {
+    guard let viewController = storyboard.instantiateViewController(
+      withIdentifier: "AddDevice") as? AddDeviceViewController else {
       fatalError()
     }
     let viewModel = AddDeviceViewModel(coordinator: self)
     viewController.viewModel = viewModel
     viewController.hidesBottomBarWhenPushed = true
-    
+
     navigationController.isNavigationBarHidden = true
     navigationController.pushViewController(viewController, animated: true)
   }

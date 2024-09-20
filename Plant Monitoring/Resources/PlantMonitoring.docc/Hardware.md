@@ -4,4 +4,14 @@ This article explains the details about the device that is used to monitor plant
 
 ## Overview
 
-This device has some sensors to record humidity, light level and temperature. It has ESP32 module that interacts with the API so send the sensor outputs.
+The plant monitoring device is equipped with several sensors to measure critical environmental factors, ensuring optimal plant health. The device records:
+
+- `Humidity: Measures the moisture level in the plant’s soil.
+- `Light Level`: Tracks the intensity of light, ensuring plants receive adequate lighting.
+- `Temperature`: Monitors the ambient temperature in the plant’s environment.
+
+## API Interaction
+
+The ESP32 module interacts directly with the **Plant Monitoring API** to upload data such as temperature, humidity, and light levels. This data can be accessed remotely by users via the Plant Monitoring mobile application.
+
+For more information on how to access and interact with the API, refer to the [API section](#API) of the documentation.

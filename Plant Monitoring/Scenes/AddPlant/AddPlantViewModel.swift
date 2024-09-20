@@ -43,6 +43,20 @@ public final class AddPlantViewModel {
     }
   }
 
+  public func uploadPlantImage(plantId: String, imageData: Data) -> Promise<UploadPlantImageItem> {
+    return Promise { seal in
+      APIService.shared.performMultiplartRequest(task:
+                                                  UploadPlantImageTask(plantId: plantId,
+                                                                       fileData: imageData))
+      .done { uploadPlantImageItem in
+        seal.fulfill(uploadPlantImageItem)
+      } .catch { err in
+        print(err.localizedDescription)
+        seal.reject(err)
+      }
+    }
+  }
+
   public func handleCameraPermission() -> Promise<Void> {
     return Promise { seal in
       let status = AVCaptureDevice.authorizationStatus(for: .video)
@@ -75,7 +89,7 @@ public final class AddPlantViewModel {
   func showImagePickerSheet(delegate: ImagePickerSheetDelegate) {
     coordinator.showImagePickerSheet(delegate: delegate)
   }
-  
+
   public func showAddDevice() {
     coordinator.showAddDevice()
   }

@@ -30,7 +30,6 @@
 		0F4A861A2B92087100EC6BD9 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A86192B92087100EC6BD9 /* UserDefaultsKeys.swift */; };
 		0F4A861D2B95E3AA00EC6BD9 /* SplashDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A861C2B95E3AA00EC6BD9 /* SplashDisplay.swift */; };
 		0F6AA5362BE106A000DE32EA /* Date+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6AA5352BE106A000DE32EA /* Date+Additions.swift */; };
-		0F6AA5382BE110E600DE32EA /* Plant Monitoring.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0F6AA5372BE110E600DE32EA /* Plant Monitoring.docc */; };
 		0F8FE1D92B99E6EB00F36B00 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8FE1D82B99E6EB00F36B00 /* SwiftMessages */; };
 		0FAC58FE2C05FA4C00197153 /* PlantMonitoring.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0FAC58FD2C05FA4C00197153 /* PlantMonitoring.docc */; };
 		0FC8DCBC2B99A3B20070B4F0 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC8DCBB2B99A3B20070B4F0 /* NotificationService.swift */; };
@@ -79,6 +78,8 @@
 		8B3096FF2C85A7D900B3EDAA /* AddPlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3096FE2C85A7D900B3EDAA /* AddPlantCell.swift */; };
 		8B3097042C85A9AD00B3EDAA /* TextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B3097032C85A9AD00B3EDAA /* TextFieldView.xib */; };
 		8B3097062C85AA0B00B3EDAA /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3097052C85AA0B00B3EDAA /* TextFieldView.swift */; };
+		8B3644D52C9D4E7B002D679C /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3644D42C9D4E72002D679C /* Data+Additions.swift */; };
+		8B3644D82C9D7437002D679C /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3644D72C9D7430002D679C /* UIImage+Additions.swift */; };
 		8B45AB482C6CF1D700B5C6FE /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB3E2C6CF1D700B5C6FE /* StatusBar.swift */; };
 		8B45AB492C6CF1D700B5C6FE /* StatusBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB3F2C6CF1D700B5C6FE /* StatusBar.xib */; };
 		8B45AB4B2C6CF1D700B5C6FE /* PlantDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B45AB442C6CF1D700B5C6FE /* PlantDetailCoordinator.swift */; };
@@ -110,6 +111,9 @@
 		8B84A8E32C6DE56000592EB6 /* PlantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B84A8E22C6DE56000592EB6 /* PlantCell.xib */; };
 		8B84A8E52C6E1A7200592EB6 /* PlantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */; };
 		8B84A8EA2C6F907200592EB6 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */; };
+		8BD6FFD52C9AA8CA00C268CB /* UploadPlantImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6FFD42C9AA8CA00C268CB /* UploadPlantImageItem.swift */; };
+		8BD6FFD72C9AA8DA00C268CB /* UploadPlantImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6FFD62C9AA8DA00C268CB /* UploadPlantImageTask.swift */; };
+		8BD6FFDB2C9AB6BB00C268CB /* NSMutableData+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD6FFDA2C9AB6BB00C268CB /* NSMutableData+Additions.swift */; };
 		8BE09EB22C6FBB9A005C9846 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8BE09EB12C6FBB9A005C9846 /* Lottie */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +205,8 @@
 		8B3096FE2C85A7D900B3EDAA /* AddPlantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlantCell.swift; sourceTree = "<group>"; };
 		8B3097032C85A9AD00B3EDAA /* TextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldView.xib; sourceTree = "<group>"; };
 		8B3097052C85AA0B00B3EDAA /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		8B3644D42C9D4E72002D679C /* Data+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
+		8B3644D72C9D7430002D679C /* UIImage+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
 		8B45AB3E2C6CF1D700B5C6FE /* StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		8B45AB3F2C6CF1D700B5C6FE /* StatusBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusBar.xib; sourceTree = "<group>"; };
 		8B45AB432C6CF1D700B5C6FE /* PlantDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlantDetail.storyboard; sourceTree = "<group>"; };
@@ -233,6 +239,9 @@
 		8B801BC02C77C12400097577 /* OnboardingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnboardingCell.xib; sourceTree = "<group>"; };
 		8B84A8E22C6DE56000592EB6 /* PlantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlantCell.xib; sourceTree = "<group>"; };
 		8B84A8E92C6F907200592EB6 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		8BD6FFD42C9AA8CA00C268CB /* UploadPlantImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPlantImageItem.swift; sourceTree = "<group>"; };
+		8BD6FFD62C9AA8DA00C268CB /* UploadPlantImageTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPlantImageTask.swift; sourceTree = "<group>"; };
+		8BD6FFDA2C9AB6BB00C268CB /* NSMutableData+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Additions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +345,7 @@
 		0F028BE62B987222000C70F5 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8B3644D62C9D7425002D679C /* UIImage */,
 				8B801B9F2C74D4CB00097577 /* UIImageView */,
 				8B2467812C885FED003C58A6 /* UIResponder */,
 				0F028BE72B987227000C70F5 /* UIView */,
@@ -599,6 +609,7 @@
 		3F7EDD2E2B66926300946FF9 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				8BD6FFD82C9AB6AB00C268CB /* Data */,
 				8B2467992C8BA4F0003C58A6 /* Optional */,
 				8B801BB92C77BFD100097577 /* Int */,
 				0F6AA5342BE1069300DE32EA /* Date */,
@@ -681,6 +692,7 @@
 			children = (
 				8B211CB32C982E8E00BDA3A9 /* GetAvailableDevicesTask.swift */,
 				8B733C802C9A1076006E0173 /* CreatePlantTask.swift */,
+				8BD6FFD62C9AA8DA00C268CB /* UploadPlantImageTask.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -690,6 +702,7 @@
 			children = (
 				8B211CB12C982E6A00BDA3A9 /* AvailableDevicesItem.swift */,
 				8B733C7E2C9A1032006E0173 /* CreatePlantItem.swift */,
+				8BD6FFD42C9AA8CA00C268CB /* UploadPlantImageItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -821,6 +834,14 @@
 				8B3097032C85A9AD00B3EDAA /* TextFieldView.xib */,
 			);
 			path = TextFieldView;
+			sourceTree = "<group>";
+		};
+		8B3644D62C9D7425002D679C /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				8B3644D72C9D7430002D679C /* UIImage+Additions.swift */,
+			);
+			path = UIImage;
 			sourceTree = "<group>";
 		};
 		8B45AB402C6CF1D700B5C6FE /* StatusBar */ = {
@@ -974,6 +995,23 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		8BD6FFD82C9AB6AB00C268CB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8B3644D42C9D4E72002D679C /* Data+Additions.swift */,
+				8BD6FFD92C9AB6B000C268CB /* NSMutableData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8BD6FFD92C9AB6B000C268CB /* NSMutableData */ = {
+			isa = PBXGroup;
+			children = (
+				8BD6FFDA2C9AB6BB00C268CB /* NSMutableData+Additions.swift */,
+			);
+			path = NSMutableData;
+			sourceTree = "<group>";
+		};
 		8BE09EB42C6FBBD8005C9846 /* Lotties */ = {
 			isa = PBXGroup;
 			children = (
@@ -1111,11 +1149,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F028BE92B987242000C70F5 /* UIView+Additions.swift in Sources */,
+				8BD6FFD52C9AA8CA00C268CB /* UploadPlantImageItem.swift in Sources */,
 				8B3096FF2C85A7D900B3EDAA /* AddPlantCell.swift in Sources */,
 				8B45AB4D2C6CF1D700B5C6FE /* PlantDetailViewModel.swift in Sources */,
+				8BD6FFD72C9AA8DA00C268CB /* UploadPlantImageTask.swift in Sources */,
 				8B24679B2C8BA512003C58A6 /* Optional+Additions.swift in Sources */,
 				8B801BA12C74D4DD00097577 /* UIImageView+Additions.swift in Sources */,
 				0FEB092B2BA09F530039396F /* APIURLSessionDelegate.swift in Sources */,
+				8B3644D82C9D7437002D679C /* UIImage+Additions.swift in Sources */,
 				0F07FBDC2B90B26000E2ED20 /* HTTPTask.swift in Sources */,
 				8B211CB22C982E6A00BDA3A9 /* AvailableDevicesItem.swift in Sources */,
 				0F6AA5362BE106A000DE32EA /* Date+Additions.swift in Sources */,
@@ -1145,7 +1186,6 @@
 				0F028BE12B976576000C70F5 /* PlantsViewModel.swift in Sources */,
 				0F07FBC92B84BEC500E2ED20 /* ConfigLoader.swift in Sources */,
 				3F7EDD202B66903F00946FF9 /* HomeViewModel.swift in Sources */,
-				0F6AA5382BE110E600DE32EA /* Plant Monitoring.docc in Sources */,
 				3F7EDD182B668FAD00946FF9 /* Coordinator.swift in Sources */,
 				8B3096F42C859EAB00B3EDAA /* AddPlantViewModel.swift in Sources */,
 				0F4A861A2B92087100EC6BD9 /* UserDefaultsKeys.swift in Sources */,
@@ -1160,8 +1200,10 @@
 				0F028BE32B97657F000C70F5 /* PlantsCoordinator.swift in Sources */,
 				8B24678B2C8873F3003C58A6 /* ImagePickerSheetViewModel.swift in Sources */,
 				8B733C832C9A1649006E0173 /* AddDeviceViewModel.swift in Sources */,
+				8B3644D52C9D4E7B002D679C /* Data+Additions.swift in Sources */,
 				8B45AB4B2C6CF1D700B5C6FE /* PlantDetailCoordinator.swift in Sources */,
 				8B45AB482C6CF1D700B5C6FE /* StatusBar.swift in Sources */,
+				8BD6FFDB2C9AB6BB00C268CB /* NSMutableData+Additions.swift in Sources */,
 				8B45AB4C2C6CF1D700B5C6FE /* PlantDetailViewController.swift in Sources */,
 				0F0FB7C62BA06192006D2BBF /* GetPlantsTask.swift in Sources */,
 				8B801BA42C77217A00097577 /* OnboardingViewController.swift in Sources */,

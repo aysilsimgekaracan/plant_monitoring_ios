@@ -19,3 +19,14 @@ protocol HTTPTask {
   var parameters: [String: Any]? { get }
   var additionalHeaders: [String: Any]? { get }
 }
+
+protocol HTTPMultipartTask {
+  associatedtype ResponseType: Codable, Decodable
+  var endpoint: String { get }
+  var method: HTTPMethod { get }
+  var parameters: [String: Any]? { get }
+  var additionalHeaders: [String: Any]? { get }
+  var fileData: Data { get }
+  var fileName: String { get }
+  var mimeType: String { get }
+}

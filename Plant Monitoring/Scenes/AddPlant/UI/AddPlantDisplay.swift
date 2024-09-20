@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct PlantDetails {
   var name: String
@@ -24,10 +25,11 @@ public struct AddPlantDisplay {
 
   public let availableDevices: [AvailableDeviceItem]
   public var plantDetails: PlantDetails
+  public var plantImage: UIImage?
 
   static let empty: AddPlantDisplay = AddPlantDisplay(availableDevices: [], plantDetails: PlantDetails.empty)
 
-  public init(availableDevices: [AvailableDeviceItem], plantDetails: PlantDetails) {
+  public init(availableDevices: [AvailableDeviceItem], plantDetails: PlantDetails, image: UIImage? = nil) {
     self.availableDevices = availableDevices
     self.plantDetails = plantDetails
   }

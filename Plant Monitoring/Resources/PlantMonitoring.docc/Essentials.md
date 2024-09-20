@@ -2,7 +2,11 @@
 
 ## Overview
 
+
+
 ### Networking
+
+This section focuses on the services and tasks responsible for handling network communication in the app.
 
 - ``APIService``
 - ``APIURLSessionDelegate``
@@ -11,17 +15,20 @@
 
 ### Notification Service
 
+This section deals with in-app notifications and how they are displayed to users.
+
 - ``NotificationService``
 - ``NotificationStyle``
 - ``NotificationTheme``
 - ``NotificationLayout``
 
-## Tasks
+### ValidationService
 
-- ``GetPlantsTask``
+This section deals with validating user input across different text fields in the app.
+
+- ``ValidationService``
+- ``TextValidator``
 
 ## Models
 
-- ``TokenItem``
-- ``PlantsItem``
-
+For more information, see <doc:Models>.

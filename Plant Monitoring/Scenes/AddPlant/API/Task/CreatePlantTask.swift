@@ -18,7 +18,11 @@ public struct CreatePlantTask: HTTPTask {
 
   typealias ResponseType = CreatePlantItem
 
-  public init(name: String, type: String, location: String, description: String) {
-    self.parameters = ["name": name, "type": type, "location": location, "description": description]
+  public init(name: String, type: String, location: String, description: String, imageUrl: String = "") {
+    self.parameters = ["name": name,
+                       "type": type,
+                       "location": location,
+                       "description": description,
+                       "imageUrl": imageUrl]
   }
 }

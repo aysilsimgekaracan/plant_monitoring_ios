@@ -146,6 +146,15 @@ public final class AddPlantViewController: UIViewController {
     backButton.isHidden = index == 0
   }
 
+  private func showSuccessMessageAndNavigateToAddDevice() {
+    NotificationService.shared.showNotification(layout: .message,
+                                                theme: .success,
+                                                title: "add.plant.success.title".localized(),
+                                                body: "add.plant.success.add.device.body".localized()) {
+      self.viewModel.showAddDevice()
+    }
+  }
+
 }
 
 // MARK: UICollectionViewDelegate, UICollectionViewDataSource
@@ -227,6 +236,7 @@ extension AddPlantViewController: UIImagePickerControllerDelegate, UINavigationC
     guard let image = info[.editedImage] as? UIImage else {
       return
     }
+    display.plantImage = image
 
     let indexPath = IndexPath(item: CellTypes.addPlantCell.rawValue, section: .zero)
     if let cell = collectionView.cellForItem(at: indexPath) as? AddPlantCell {
@@ -252,6 +262,7 @@ extension AddPlantViewController: PHPickerViewControllerDelegate {
           }
 
           if let selectedImage = image as? UIImage {
+            self.display.plantImage = selectedImage
             DispatchQueue.main.async {
               let indexPath = IndexPath(item: CellTypes.addPlantCell.rawValue, section: .zero)
               if let cell = self.collectionView.cellForItem(at: indexPath) as? AddPlantCell {
@@ -269,17 +280,30 @@ extension AddPlantViewController: PHPickerViewControllerDelegate {
 
 extension AddPlantViewController: AvailableDevicesCellDelegate {
   func didTapAddANewDevice(_ cell: UICollectionViewCell) {
-    // TODO: Save the plant and navigate to the add a new device scene
     showLoadingIndicator()
-    viewModel.createPlant(from: display.plantDetails).done { [weak self] _ in
-      NotificationService.shared.showNotification(layout: .message,
-                                                  theme: .success,
-                                                  title: "add.plant.success.title".localized(),
-                                                  body: "add.plant.success.add.device.body".localized()) {
-        // TODO: navigate to add a new device screen
-        self?.hideLoadingIndicator()
-        self?.viewModel.showAddDevice()
+    viewModel.createPlant(from: display.plantDetails).done { [weak self] createPlantItem in
+      guard let self = self else { return }
+      if let image = self.display.plantImage {
+
+        let targertSize = CGSize(width: 800, height: 600)
+        let resizedImage = image.resizedImage(to: targertSize)
+
+        if let imageData = resizedImage.jpegData(compressionQuality: 0.7) {
+          self.viewModel.uploadPlantImage(plantId: createPlantItem.id, imageData: imageData).done { [weak self] _ in
+            self?.hideLoadingIndicator()
+            self?.showSuccessMessageAndNavigateToAddDevice()
+          }.catch { [weak self] error in
+            self?.hideLoadingIndicator()
+            NotificationService.shared.showNotification(body: error.localizedDescription) {}
+          }
+        }
+      } else {
+        self.hideLoadingIndicator()
+        self.showSuccessMessageAndNavigateToAddDevice()
       }
-    }.cauterize()
+    }.catch { [weak self] error in
+      self?.hideLoadingIndicator()
+      NotificationService.shared.showNotification(body: error.localizedDescription) {}
+    }
   }
 }
